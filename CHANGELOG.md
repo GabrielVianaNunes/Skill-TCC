@@ -4,6 +4,8 @@ Formato baseado em Keep a Changelog; versões seguem o versionamento semântico.
 
 ## [Não lançado]
 
+## [1.1.0] - 2026-11-17
+
 ### Adicionado
 - Integração contínua (testes, validação da skill e reprodutibilidade do relatório de exemplo).
 - Fluxo de trabalho Git Flow documentado, modelo de Pull Request e CODEOWNERS.
