@@ -1,0 +1,7 @@
+schema_version: "1.1"
+name: tir-multipla-sem-tma
+expected_outcome: |
+  A resposta executa calc_vpl_tir.py, identifica que o fluxo tem duas trocas de sinal e duas TIRs (10% e 20%),
+  não apresenta uma TIR única como resposta, recomenda decidir pelo VPL (e TIRM) e, como a TMA não foi
+  informada, pede a TMA ao usuário ou usa uma hipótese explicitamente rotulada, sem afirmar a taxa vigente
+  de mercado como fato.
