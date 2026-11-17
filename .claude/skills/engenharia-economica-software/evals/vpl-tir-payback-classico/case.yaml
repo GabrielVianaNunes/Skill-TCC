@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: vpl-tir-payback-classico
+expected_outcome: |
+  A resposta calcula com o script calc_vpl_tir.py e informa VPL de R$ 388,77, TIR de cerca de 24,89% a.a.,
+  payback simples de 2,6 anos e payback descontado de cerca de 3,05 anos, concluindo que o projeto é viável
+  porque o VPL é positivo e a TIR supera a TMA de 10%.

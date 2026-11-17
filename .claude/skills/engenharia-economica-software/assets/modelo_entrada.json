@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "titulo": "Valoração econômica do Projeto Exemplo",
+    "sistema": "Projeto Exemplo (agenda online de uma clínica-escola, dados fictícios)",
+    "descricao": "Aplicação web de agendamento usada por uma clínica-escola. Todos os números deste arquivo são fictícios e servem só para mostrar o formato.",
+    "autores": ["Pessoa Autora 1", "Pessoa Autora 2"],
+    "curso": "Curso de exemplo",
+    "componente": "Engenharia Econômica",
+    "docente": "Docente de exemplo",
+    "data_base": "01/01/2027",
+    "moeda": "BRL, valores reais, fluxos anuais",
+    "situacao": "Protótipo concluído, sem medição em produção."
+  },
+  "fatos_medidos": [
+    {"item": "Stack", "valor": "informe a stack"},
+    {"item": "Commits", "valor": "informe a contagem do git"}
+  ],
+  "premissas": {
+    "horizonte_anos": 3,
+    "tma": {"taxa_base": 0.10, "rotulo_taxa_base": "hipótese: peça a taxa vigente ao usuário", "premios": {"risco_do_projeto": 0.05}, "inflacao": 0.04, "faixa_nominal": [0.12, 0.18]},
+    "premio_risco_negocio": 0.08,
+    "tributos_uso_interno": 0.0
+  },
+  "parametros": {
+    "taxa_hora_dev": {"min": 40, "provavel": 55, "max": 75, "unidade": "R$/h", "descricao": "Custo da hora de desenvolvimento com encargos", "origem": "hipótese de mercado", "como_validar": "Pesquisa salarial regional", "derivacao": "salário x (1 + encargos) / horas produtivas"},
+    "custo_hora_equipe": {"min": 25, "provavel": 30, "max": 40, "unidade": "R$/h", "descricao": "Custo da hora da equipe usuária", "origem": "hipótese do grupo", "como_validar": "Folha média por cargo"},
+    "usuarios": {"min": 3, "provavel": 5, "max": 8, "unidade": "usuários", "sentido_fixo": "beneficio", "descricao": "Usuários internos ativos", "origem": "hipótese do grupo", "como_validar": "Contas ativas após 3 meses"},
+    "horas_economizadas_usuario_mes": {"min": 2, "provavel": 5, "max": 8, "unidade": "h/usuário/mês", "descricao": "Horas de agendamento manual evitadas", "origem": "hipótese do grupo", "como_validar": "Cronometrar antes e depois"},
+    "horas_manutencao_mes": {"min": 2, "provavel": 4, "max": 8, "unidade": "h/mês", "descricao": "Manutenção", "origem": "estimado", "como_validar": "Apontar horas"},
+    "custo_infra_ano": {"min": 300, "provavel": 1200, "max": 2400, "unidade": "R$/ano", "descricao": "Hospedagem e domínio", "origem": "hipótese de mercado", "como_validar": "Cotar no provedor"}
+  },
+  "esforco": {
+    "meses_informados": [
+      {"mes": "2026-09", "horas_min": 40, "horas_provavel": 60, "horas_max": 90},
+      {"mes": "2026-10", "horas_min": 50, "horas_provavel": 70, "horas_max": 100},
+      {"mes": "2026-11", "horas_min": 30, "horas_provavel": 50, "horas_max": 80}
+    ]
+  },
+  "custos_indiretos_desenvolvimento": [
+    {"descricao": "Rateio de equipamento e internet", "valor": 1200, "rateio": 0.5}
+  ],
+  "ativos_ti": [{"nome": "Notebook", "custo": 4000, "taxa_anual": 0.2}],
+  "implantacao": [
+    {"descricao": "Deploy e configuração", "horas": 10, "taxa": "taxa_hora_dev"},
+    {"descricao": "Treinamento dos usuários (2 h cada)", "horas": "2*usuarios", "taxa": "custo_hora_equipe"}
+  ],
+  "rampa_adocao": [0.8, 1.0, 1.0],
+  "beneficios": [
+    {"nome": "Horas economizadas", "fatores": ["usuarios", "horas_economizadas_usuario_mes", "custo_hora_equipe"], "multiplicador": 12}
+  ],
+  "opex": [
+    {"nome": "Manutenção", "fatores": ["horas_manutencao_mes", "taxa_hora_dev"], "multiplicador": 12},
+    {"nome": "Infraestrutura", "fatores": ["custo_infra_ano"], "multiplicador": 1}
+  ],
+  "gva": {
+    "bac_horas": 160, "nota_registro": "Plano informado pelo time.", "bac_nota": "Orçamento de 160 h em 3 sprints mensais.",
+    "sprints_planejadas": 3, "meses": ["2026-09", "2026-10", "2026-11"],
+    "pacotes": [
+      {"id": "P1", "nome": "Cadastro e login", "pontos": 8, "mes_concluido": "2026-09"},
+      {"id": "P2", "nome": "Agenda", "pontos": 13, "mes_concluido": "2026-11"},
+      {"id": "P3", "nome": "Lembretes", "pontos": 5, "mes_concluido": null}
+    ]
+  },
+  "alternativas_infra": {
+    "descricao": "Hospedagem por 3 anos.",
+    "opcoes": [
+      {"nome": "Nuvem", "investimento": 300, "anual": 1200, "vida": 3},
+      {"nome": "Servidor local", "investimento": 6000, "anual": 600, "vida": 4}
+    ],
+    "criterios": [{"nome": "custo", "peso": 0.6}, {"nome": "risco", "peso": 0.4}],
+    "notas": {"Nuvem": {"custo": 8, "risco": 7}, "Servidor local": {"custo": 5, "risco": 6}}
+  },
+  "backlog": {
+    "capacidade_horas": 20,
+    "itens": [
+      {"id": "a", "titulo": "Lembrete por e-mail", "valor": 8, "esforco_horas": 8, "valor_anual": 1500, "justificativa": "Reduz faltas"},
+      {"id": "b", "titulo": "Relatório mensal", "valor": 5, "esforco_horas": 16, "valor_anual": 600, "justificativa": "Gestão"},
+      {"id": "c", "titulo": "Tema personalizado", "valor": 2, "esforco_horas": 12, "valor_anual": 50, "justificativa": "Estética"}
+    ]
+  },
+  "riscos": [
+    {"risco": "Adoção baixa", "probabilidade": "média", "impacto": "alto", "variavel": "usuarios", "mitigacao": "Treinamento"}
+  ]
+}

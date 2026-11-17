@@ -1,0 +1,2625 @@
+{
+  "meta": {
+    "titulo": "Valoração econômica do ZEISS PILOT",
+    "sistema": "ZEISS PILOT",
+    "descricao": "Sistema web de gestão e rastreabilidade do Centro de Excelência em Metrologia (CEM) do SENAI Zeiss, em Goiânia (GO).",
+    "autores": [
+      "Gabriel Viana Nunes",
+      "João Vítor de Alencar Fraissat Mamede"
+    ],
+    "curso": "Engenharia de Software, Faculdade SENAI Fatesg",
+    "componente": "Engenharia Econômica",
+    "docente": "Msc. Ujeverson Tavares Sampaio",
+    "data_base": "17/11/2026",
+    "moeda": "BRL, valores reais (preços constantes de novembro de 2026), fluxos anuais",
+    "situacao": "Sistema funcionalmente completo, ainda não implantado em produção. Não existe medição de ganho em uso real."
+  },
+  "tma": {
+    "taxa_base": 0.11,
+    "premios": {
+      "risco_do_projeto": 0.04
+    },
+    "metodo": "composto",
+    "tma_nominal": 0.1544,
+    "inflacao": 0.045,
+    "tma_real": 0.104689,
+    "tma_mensal_equivalente": 0.012037
+  },
+  "tma_real": 0.104689,
+  "horizonte_anos": 5,
+  "esforco": {
+    "meses": [
+      {
+        "mes": "2026-06",
+        "commits": 5,
+        "dias_ativos": 2,
+        "sessoes": 2,
+        "horas_sessoes": 2.324722,
+        "commits_por_autor": {
+          "JVM": 5
+        },
+        "horas_min": 8.0,
+        "horas_provavel": 18.0,
+        "horas_max": 32.0
+      },
+      {
+        "mes": "2026-07",
+        "commits": 53,
+        "dias_ativos": 6,
+        "sessoes": 9,
+        "horas_sessoes": 20.273889,
+        "commits_por_autor": {
+          "GVN": 53
+        },
+        "horas_min": 24.0,
+        "horas_provavel": 54.0,
+        "horas_max": 96.0
+      },
+      {
+        "mes": "2026-08",
+        "commits": 117,
+        "dias_ativos": 10,
+        "sessoes": 12,
+        "horas_sessoes": 56.083889,
+        "commits_por_autor": {
+          "GVN": 117
+        },
+        "horas_min": 56.083889,
+        "horas_provavel": 90.0,
+        "horas_max": 160.0
+      },
+      {
+        "mes": "2026-09",
+        "commits": 3,
+        "dias_ativos": 1,
+        "sessoes": 1,
+        "horas_sessoes": 3.963056,
+        "commits_por_autor": {
+          "GVN": 3
+        },
+        "horas_min": 4.0,
+        "horas_provavel": 9.0,
+        "horas_max": 16.0
+      },
+      {
+        "mes": "2026-10",
+        "commits": 23,
+        "dias_ativos": 4,
+        "sessoes": 5,
+        "horas_sessoes": 6.271111,
+        "commits_por_autor": {
+          "JVM": 23
+        },
+        "horas_min": 16.0,
+        "horas_provavel": 36.0,
+        "horas_max": 64.0
+      },
+      {
+        "mes": "2026-11",
+        "commits": 9,
+        "dias_ativos": 1,
+        "sessoes": 1,
+        "horas_sessoes": 1.250278,
+        "commits_por_autor": {
+          "JVM": 9
+        },
+        "horas_min": 4.0,
+        "horas_provavel": 9.0,
+        "horas_max": 16.0
+      }
+    ],
+    "totais": {
+      "min": 112.083889,
+      "provavel": 216.0,
+      "max": 384.0
+    },
+    "total_commits": 210,
+    "total_dias_ativos": 24,
+    "total_horas_sessoes": 90.166944,
+    "parametros": {
+      "horas_por_dia_ativo": {
+        "min": 4,
+        "provavel": 6,
+        "max": 8
+      },
+      "fator_trabalho_sem_commit": {
+        "min": 1.0,
+        "provavel": 1.5,
+        "max": 2.0
+      },
+      "intervalo_sessao_horas": 3,
+      "preparo_sessao_horas": 1
+    },
+    "rotulo": "estimativa derivada do histórico do repositório (não é medição de horas)",
+    "base_importada": {
+      "linhas": 36722,
+      "produtividade": {
+        "alta": 45,
+        "provavel": 30,
+        "baixa": 20
+      },
+      "horas_min": 816.044444,
+      "horas_provavel": 1224.066667,
+      "horas_max": 1836.1
+    }
+  },
+  "modelos": {
+    "pessimista": {
+      "cenario": "pessimista",
+      "beneficios": [
+        {
+          "nome": "Horas de controle manual economizadas",
+          "anual": 4200.0
+        },
+        {
+          "nome": "Retrabalho evitado",
+          "anual": 1260.0
+        },
+        {
+          "nome": "Margem de OS preservadas no pipeline comercial",
+          "anual": 0.0
+        },
+        {
+          "nome": "Risco de não conformidade 17025 evitado (valor esperado)",
+          "anual": 300.0
+        }
+      ],
+      "opex": [
+        {
+          "nome": "Manutenção corretiva e evolutiva",
+          "anual": 20160.0
+        },
+        {
+          "nome": "Administração da infraestrutura",
+          "anual": 4032.0
+        },
+        {
+          "nome": "Infraestrutura em nuvem (domínio, backup, reserva)",
+          "anual": 3400.0
+        }
+      ],
+      "implantacao": [
+        {
+          "descricao": "Provisionar VM, domínio, TLS e backup externo; primeiro deploy",
+          "horas": 24.0,
+          "valor": 2016.0,
+          "taxa": "taxa_hora_dev"
+        },
+        {
+          "descricao": "Ajustes de produto prioritários antes da produção (itens a e f do backlog)",
+          "horas": 4.0,
+          "valor": 336.0,
+          "taxa": "taxa_hora_dev"
+        },
+        {
+          "descricao": "Treinamento: preparação e condução pelos desenvolvedores",
+          "horas": 12.0,
+          "valor": 1008.0,
+          "taxa": "taxa_hora_dev"
+        },
+        {
+          "descricao": "Treinamento: horas dos usuários (4 h por usuário)",
+          "horas": 20.0,
+          "valor": 1200.0,
+          "taxa": "custo_hora_equipe"
+        },
+        {
+          "descricao": "Carga inicial de cadastros pela equipe do laboratório",
+          "horas": 40.0,
+          "valor": 2400.0,
+          "taxa": "custo_hora_equipe"
+        }
+      ],
+      "desenvolvimento": {
+        "horas_git": 384.0,
+        "horas_base": 1836.1,
+        "horas_total": 2220.1,
+        "taxa_hora": 84.0,
+        "custo_direto": 186488.4,
+        "custo_indireto": 1433.335,
+        "total": 187921.735,
+        "detalhe": {
+          "diretos": [
+            {
+              "papel": "Desenvolvimento antes do primeiro commit (base importada)",
+              "horas": 1836.1,
+              "taxa_hora": 84.0,
+              "custo": 154232.4
+            },
+            {
+              "papel": "Desenvolvimento registrado no git",
+              "horas": 384.0,
+              "taxa_hora": 84.0,
+              "custo": 32256.0
+            }
+          ],
+          "indiretos": [
+            {
+              "descricao": "Depreciação dos 2 notebooks de desenvolvimento (R$ 5.000 cada, 20% a.a., 10 meses, 50% de uso no projeto)",
+              "valor": 1666.67,
+              "rateio": 0.5,
+              "custo": 833.335
+            },
+            {
+              "descricao": "Internet e energia (R$ 100/mês por dev, 10 meses)",
+              "valor": 2000,
+              "rateio": 0.3,
+              "custo": 600.0
+            },
+            {
+              "descricao": "Ferramentas e licenças (IDE, repositório, CI em camadas gratuitas)",
+              "valor": 0,
+              "rateio": 1.0,
+              "custo": 0.0
+            }
+          ],
+          "custo_direto": 186488.4,
+          "custo_indireto": 1433.335,
+          "custo_total": 187921.735,
+          "markup": 0.25,
+          "margem_equivalente_ao_markup": 0.2,
+          "margem": 0.2,
+          "tributos": 0.0,
+          "precos": {
+            "markup_sobre_custo": 234902.16875,
+            "margem_sobre_preco": 234902.16875,
+            "markup_divisor_com_tributos": 234902.16875,
+            "preco_minimo": 187921.735
+          }
+        }
+      },
+      "beneficios_t": [
+        4032.0,
+        5760.0,
+        5760.0,
+        5760.0,
+        5760.0
+      ],
+      "opex_t": [
+        27592.0,
+        27592.0,
+        27592.0,
+        27592.0,
+        27592.0
+      ],
+      "investimento_a": 6960.0,
+      "investimento_b": 194881.735,
+      "fluxo_a": [
+        -6960.0,
+        -23560.0,
+        -21832.0,
+        -21832.0,
+        -21832.0,
+        -21832.0
+      ],
+      "fluxo_b": [
+        -194881.735,
+        -23560.0,
+        -21832.0,
+        -21832.0,
+        -21832.0,
+        -21832.0
+      ],
+      "rampa": [
+        0.7,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "base": {
+      "cenario": "base",
+      "beneficios": [
+        {
+          "nome": "Horas de controle manual economizadas",
+          "anual": 17280.0
+        },
+        {
+          "nome": "Retrabalho evitado",
+          "anual": 3240.0
+        },
+        {
+          "nome": "Margem de OS preservadas no pipeline comercial",
+          "anual": 2400.0
+        },
+        {
+          "nome": "Risco de não conformidade 17025 evitado (valor esperado)",
+          "anual": 1500.0
+        }
+      ],
+      "opex": [
+        {
+          "nome": "Manutenção corretiva e evolutiva",
+          "anual": 8640.0
+        },
+        {
+          "nome": "Administração da infraestrutura",
+          "anual": 1440.0
+        },
+        {
+          "nome": "Infraestrutura em nuvem (domínio, backup, reserva)",
+          "anual": 760.0
+        }
+      ],
+      "implantacao": [
+        {
+          "descricao": "Provisionar VM, domínio, TLS e backup externo; primeiro deploy",
+          "horas": 24.0,
+          "valor": 1440.0,
+          "taxa": "taxa_hora_dev"
+        },
+        {
+          "descricao": "Ajustes de produto prioritários antes da produção (itens a e f do backlog)",
+          "horas": 4.0,
+          "valor": 240.0,
+          "taxa": "taxa_hora_dev"
+        },
+        {
+          "descricao": "Treinamento: preparação e condução pelos desenvolvedores",
+          "horas": 12.0,
+          "valor": 720.0,
+          "taxa": "taxa_hora_dev"
+        },
+        {
+          "descricao": "Treinamento: horas dos usuários (4 h por usuário)",
+          "horas": 32.0,
+          "valor": 1440.0,
+          "taxa": "custo_hora_equipe"
+        },
+        {
+          "descricao": "Carga inicial de cadastros pela equipe do laboratório",
+          "horas": 40.0,
+          "valor": 1800.0,
+          "taxa": "custo_hora_equipe"
+        }
+      ],
+      "desenvolvimento": {
+        "horas_git": 216.0,
+        "horas_base": 1224.066667,
+        "horas_total": 1440.066667,
+        "taxa_hora": 60.0,
+        "custo_direto": 86404.0,
+        "custo_indireto": 1433.335,
+        "total": 87837.335,
+        "detalhe": {
+          "diretos": [
+            {
+              "papel": "Desenvolvimento antes do primeiro commit (base importada)",
+              "horas": 1224.066667,
+              "taxa_hora": 60.0,
+              "custo": 73444.0
+            },
+            {
+              "papel": "Desenvolvimento registrado no git",
+              "horas": 216.0,
+              "taxa_hora": 60.0,
+              "custo": 12960.0
+            }
+          ],
+          "indiretos": [
+            {
+              "descricao": "Depreciação dos 2 notebooks de desenvolvimento (R$ 5.000 cada, 20% a.a., 10 meses, 50% de uso no projeto)",
+              "valor": 1666.67,
+              "rateio": 0.5,
+              "custo": 833.335
+            },
+            {
+              "descricao": "Internet e energia (R$ 100/mês por dev, 10 meses)",
+              "valor": 2000,
+              "rateio": 0.3,
+              "custo": 600.0
+            },
+            {
+              "descricao": "Ferramentas e licenças (IDE, repositório, CI em camadas gratuitas)",
+              "valor": 0,
+              "rateio": 1.0,
+              "custo": 0.0
+            }
+          ],
+          "custo_direto": 86404.0,
+          "custo_indireto": 1433.335,
+          "custo_total": 87837.335,
+          "markup": 0.25,
+          "margem_equivalente_ao_markup": 0.2,
+          "margem": 0.2,
+          "tributos": 0.0,
+          "precos": {
+            "markup_sobre_custo": 109796.66875,
+            "margem_sobre_preco": 109796.66875,
+            "markup_divisor_com_tributos": 109796.66875,
+            "preco_minimo": 87837.335
+          }
+        }
+      },
+      "beneficios_t": [
+        17094.0,
+        24420.0,
+        24420.0,
+        24420.0,
+        24420.0
+      ],
+      "opex_t": [
+        10840.0,
+        10840.0,
+        10840.0,
+        10840.0,
+        10840.0
+      ],
+      "investimento_a": 5640.0,
+      "investimento_b": 93477.335,
+      "fluxo_a": [
+        -5640.0,
+        6254.0,
+        13580.0,
+        13580.0,
+        13580.0,
+        13580.0
+      ],
+      "fluxo_b": [
+        -93477.335,
+        6254.0,
+        13580.0,
+        13580.0,
+        13580.0,
+        13580.0
+      ],
+      "rampa": [
+        0.7,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "otimista": {
+      "cenario": "otimista",
+      "beneficios": [
+        {
+          "nome": "Horas de controle manual economizadas",
+          "anual": 51840.0
+        },
+        {
+          "nome": "Retrabalho evitado",
+          "anual": 7200.0
+        },
+        {
+          "nome": "Margem de OS preservadas no pipeline comercial",
+          "anual": 10000.0
+        },
+        {
+          "nome": "Risco de não conformidade 17025 evitado (valor esperado)",
+          "anual": 5000.0
+        }
+      ],
+      "opex": [
+        {
+          "nome": "Manutenção corretiva e evolutiva",
+          "anual": 3456.0
+        },
+        {
+          "nome": "Administração da infraestrutura",
+          "anual": 576.0
+        },
+        {
+          "nome": "Infraestrutura em nuvem (domínio, backup, reserva)",
+          "anual": 160.0
+        }
+      ],
+      "implantacao": [
+        {
+          "descricao": "Provisionar VM, domínio, TLS e backup externo; primeiro deploy",
+          "horas": 24.0,
+          "valor": 1152.0,
+          "taxa": "taxa_hora_dev"
+        },
+        {
+          "descricao": "Ajustes de produto prioritários antes da produção (itens a e f do backlog)",
+          "horas": 4.0,
+          "valor": 192.0,
+          "taxa": "taxa_hora_dev"
+        },
+        {
+          "descricao": "Treinamento: preparação e condução pelos desenvolvedores",
+          "horas": 12.0,
+          "valor": 576.0,
+          "taxa": "taxa_hora_dev"
+        },
+        {
+          "descricao": "Treinamento: horas dos usuários (4 h por usuário)",
+          "horas": 48.0,
+          "valor": 1680.0,
+          "taxa": "custo_hora_equipe"
+        },
+        {
+          "descricao": "Carga inicial de cadastros pela equipe do laboratório",
+          "horas": 40.0,
+          "valor": 1400.0,
+          "taxa": "custo_hora_equipe"
+        }
+      ],
+      "desenvolvimento": {
+        "horas_git": 112.083889,
+        "horas_base": 816.044444,
+        "horas_total": 928.128333,
+        "taxa_hora": 48.0,
+        "custo_direto": 44550.16,
+        "custo_indireto": 1433.335,
+        "total": 45983.495,
+        "detalhe": {
+          "diretos": [
+            {
+              "papel": "Desenvolvimento antes do primeiro commit (base importada)",
+              "horas": 816.044444,
+              "taxa_hora": 48.0,
+              "custo": 39170.133333
+            },
+            {
+              "papel": "Desenvolvimento registrado no git",
+              "horas": 112.083889,
+              "taxa_hora": 48.0,
+              "custo": 5380.026667
+            }
+          ],
+          "indiretos": [
+            {
+              "descricao": "Depreciação dos 2 notebooks de desenvolvimento (R$ 5.000 cada, 20% a.a., 10 meses, 50% de uso no projeto)",
+              "valor": 1666.67,
+              "rateio": 0.5,
+              "custo": 833.335
+            },
+            {
+              "descricao": "Internet e energia (R$ 100/mês por dev, 10 meses)",
+              "valor": 2000,
+              "rateio": 0.3,
+              "custo": 600.0
+            },
+            {
+              "descricao": "Ferramentas e licenças (IDE, repositório, CI em camadas gratuitas)",
+              "valor": 0,
+              "rateio": 1.0,
+              "custo": 0.0
+            }
+          ],
+          "custo_direto": 44550.16,
+          "custo_indireto": 1433.335,
+          "custo_total": 45983.495,
+          "markup": 0.25,
+          "margem_equivalente_ao_markup": 0.2,
+          "margem": 0.2,
+          "tributos": 0.0,
+          "precos": {
+            "markup_sobre_custo": 57479.36875,
+            "margem_sobre_preco": 57479.36875,
+            "markup_divisor_com_tributos": 57479.36875,
+            "preco_minimo": 45983.495
+          }
+        }
+      },
+      "beneficios_t": [
+        51828.0,
+        74040.0,
+        74040.0,
+        74040.0,
+        74040.0
+      ],
+      "opex_t": [
+        4192.0,
+        4192.0,
+        4192.0,
+        4192.0,
+        4192.0
+      ],
+      "investimento_a": 5000.0,
+      "investimento_b": 50983.495,
+      "fluxo_a": [
+        -5000.0,
+        47636.0,
+        69848.0,
+        69848.0,
+        69848.0,
+        69848.0
+      ],
+      "fluxo_b": [
+        -50983.495,
+        47636.0,
+        69848.0,
+        69848.0,
+        69848.0,
+        69848.0
+      ],
+      "rampa": [
+        0.7,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "analises": {
+    "pessimista": {
+      "A": {
+        "taxa": 0.104689,
+        "fluxos": [
+          -6960.0,
+          -23560.0,
+          -21832.0,
+          -21832.0,
+          -21832.0,
+          -21832.0
+        ],
+        "vp_fluxos": [
+          -6960.0,
+          -21327.269577,
+          -17890.128804,
+          -16194.719855,
+          -14659.981158,
+          -13270.686339
+        ],
+        "vpl": -90302.785733,
+        "tir": {
+          "status": "sem_raiz",
+          "tir": null,
+          "raizes": [],
+          "trocas_sinal": 0,
+          "mensagem": "Todos os fluxos têm o mesmo sinal: não existe taxa que zere o VPL."
+        },
+        "tirm": null,
+        "payback_simples": {
+          "anos": null,
+          "status": "nao_recupera",
+          "acumulado": [
+            -6960.0,
+            -30520.0,
+            -52352.0,
+            -74184.0,
+            -96016.0,
+            -117848.0
+          ]
+        },
+        "payback_descontado": {
+          "anos": null,
+          "status": "nao_recupera",
+          "acumulado": [
+            -6960.0,
+            -28287.269577,
+            -46177.398382,
+            -62372.118236,
+            -77032.099394,
+            -90302.785733
+          ]
+        },
+        "indice_lucratividade": -11.974538,
+        "roi_nominal": -1.0,
+        "roi_descontado": -1.0,
+        "vpl_anualizado": -24107.673089,
+        "decisao": "inviável (VPL < 0)"
+      },
+      "B": {
+        "taxa": 0.104689,
+        "fluxos": [
+          -194881.735,
+          -23560.0,
+          -21832.0,
+          -21832.0,
+          -21832.0,
+          -21832.0
+        ],
+        "vp_fluxos": [
+          -194881.735,
+          -21327.269577,
+          -17890.128804,
+          -16194.719855,
+          -14659.981158,
+          -13270.686339
+        ],
+        "vpl": -278224.520733,
+        "tir": {
+          "status": "sem_raiz",
+          "tir": null,
+          "raizes": [],
+          "trocas_sinal": 0,
+          "mensagem": "Todos os fluxos têm o mesmo sinal: não existe taxa que zere o VPL."
+        },
+        "tirm": null,
+        "payback_simples": {
+          "anos": null,
+          "status": "nao_recupera",
+          "acumulado": [
+            -194881.735,
+            -218441.735,
+            -240273.735,
+            -262105.735,
+            -283937.735,
+            -305769.735
+          ]
+        },
+        "payback_descontado": {
+          "anos": null,
+          "status": "nao_recupera",
+          "acumulado": [
+            -194881.735,
+            -216209.004577,
+            -234099.133382,
+            -250293.853236,
+            -264953.834394,
+            -278224.520733
+          ]
+        },
+        "indice_lucratividade": -0.427658,
+        "roi_nominal": -1.0,
+        "roi_descontado": -1.0,
+        "vpl_anualizado": -74276.178045,
+        "decisao": "inviável (VPL < 0)"
+      }
+    },
+    "base": {
+      "A": {
+        "taxa": 0.104689,
+        "fluxos": [
+          -5640.0,
+          6254.0,
+          13580.0,
+          13580.0,
+          13580.0,
+          13580.0
+        ],
+        "vp_fluxos": [
+          -5640.0,
+          5661.321899,
+          11128.066561,
+          10073.483677,
+          9118.841339,
+          8254.668399
+        ],
+        "vpl": 38596.381875,
+        "tir": {
+          "status": "unica",
+          "tir": 1.589762,
+          "raizes": [
+            1.589762
+          ],
+          "trocas_sinal": 1,
+          "mensagem": "TIR única."
+        },
+        "tirm": 0.667785,
+        "payback_simples": {
+          "anos": 0.901823,
+          "status": "recupera",
+          "periodo_inteiro": 0,
+          "fracao": 0.901823,
+          "acumulado": [
+            -5640.0,
+            614.0,
+            14194.0,
+            27774.0,
+            41354.0,
+            54934.0
+          ],
+          "saldo_oscilou": false
+        },
+        "payback_descontado": {
+          "anos": 0.996234,
+          "status": "recupera",
+          "periodo_inteiro": 0,
+          "fracao": 0.996234,
+          "acumulado": [
+            -5640.0,
+            21.321899,
+            11149.38846,
+            21222.872137,
+            30341.713476,
+            38596.381875
+          ],
+          "saldo_oscilou": false
+        },
+        "indice_lucratividade": 7.84333,
+        "roi_nominal": 9.740071,
+        "roi_descontado": 6.84333,
+        "vpl_anualizado": 10303.878768,
+        "decisao": "viável (VPL > 0)"
+      },
+      "B": {
+        "taxa": 0.104689,
+        "fluxos": [
+          -93477.335,
+          6254.0,
+          13580.0,
+          13580.0,
+          13580.0,
+          13580.0
+        ],
+        "vp_fluxos": [
+          -93477.335,
+          5661.321899,
+          11128.066561,
+          10073.483677,
+          9118.841339,
+          8254.668399
+        ],
+        "vpl": -49240.953125,
+        "tir": {
+          "status": "unica",
+          "tir": -0.121444,
+          "raizes": [
+            -0.121444
+          ],
+          "trocas_sinal": 1,
+          "mensagem": "TIR única."
+        },
+        "tirm": -0.048838,
+        "payback_simples": {
+          "anos": null,
+          "status": "nao_recupera",
+          "acumulado": [
+            -93477.335,
+            -87223.335,
+            -73643.335,
+            -60063.335,
+            -46483.335,
+            -32903.335
+          ]
+        },
+        "payback_descontado": {
+          "anos": null,
+          "status": "nao_recupera",
+          "acumulado": [
+            -93477.335,
+            -87816.013101,
+            -76687.94654,
+            -66614.462863,
+            -57495.621524,
+            -49240.953125
+          ]
+        },
+        "indice_lucratividade": 0.473231,
+        "roi_nominal": -0.351993,
+        "roi_descontado": -0.526769,
+        "vpl_anualizado": -13145.605541,
+        "decisao": "inviável (VPL < 0)"
+      }
+    },
+    "otimista": {
+      "A": {
+        "taxa": 0.104689,
+        "fluxos": [
+          -5000.0,
+          47636.0,
+          69848.0,
+          69848.0,
+          69848.0,
+          69848.0
+        ],
+        "vp_fluxos": [
+          -5000.0,
+          43121.638947,
+          57236.612162,
+          51812.421786,
+          46902.270241,
+          42457.443175
+        ],
+        "vpl": 236530.38631,
+        "tir": {
+          "status": "unica",
+          "tir": 9.933424,
+          "raizes": [
+            9.933424
+          ],
+          "trocas_sinal": 1,
+          "mensagem": "TIR única."
+        },
+        "tirm": 1.399056,
+        "payback_simples": {
+          "anos": 0.104963,
+          "status": "recupera",
+          "periodo_inteiro": 0,
+          "fracao": 0.104963,
+          "acumulado": [
+            -5000.0,
+            42636.0,
+            112484.0,
+            182332.0,
+            252180.0,
+            322028.0
+          ],
+          "saldo_oscilou": false
+        },
+        "payback_descontado": {
+          "anos": 0.115951,
+          "status": "recupera",
+          "periodo_inteiro": 0,
+          "fracao": 0.115951,
+          "acumulado": [
+            -5000.0,
+            38121.638947,
+            95358.251109,
+            147170.672894,
+            194072.943135,
+            236530.38631
+          ],
+          "saldo_oscilou": false
+        },
+        "indice_lucratividade": 48.306077,
+        "roi_nominal": 64.4056,
+        "roi_descontado": 47.306077,
+        "vpl_anualizado": 63145.308114,
+        "decisao": "viável (VPL > 0)"
+      },
+      "B": {
+        "taxa": 0.104689,
+        "fluxos": [
+          -50983.495,
+          47636.0,
+          69848.0,
+          69848.0,
+          69848.0,
+          69848.0
+        ],
+        "vp_fluxos": [
+          -50983.495,
+          43121.638947,
+          57236.612162,
+          51812.421786,
+          46902.270241,
+          42457.443175
+        ],
+        "vpl": 190546.89131,
+        "tir": {
+          "status": "unica",
+          "tir": 1.108101,
+          "raizes": [
+            1.108101
+          ],
+          "trocas_sinal": 1,
+          "mensagem": "TIR única."
+        },
+        "tirm": 0.507816,
+        "payback_simples": {
+          "anos": 1.047925,
+          "status": "recupera",
+          "periodo_inteiro": 1,
+          "fracao": 0.047925,
+          "acumulado": [
+            -50983.495,
+            -3347.495,
+            66500.505,
+            136348.505,
+            206196.505,
+            276044.505
+          ],
+          "saldo_oscilou": false
+        },
+        "payback_descontado": {
+          "anos": 1.137357,
+          "status": "recupera",
+          "periodo_inteiro": 1,
+          "fracao": 0.137357,
+          "acumulado": [
+            -50983.495,
+            -7861.856053,
+            49374.756109,
+            101187.177894,
+            148089.448135,
+            190546.89131
+          ],
+          "saldo_oscilou": false
+        },
+        "indice_lucratividade": 4.737423,
+        "roi_nominal": 5.41439,
+        "roi_descontado": 3.737423,
+        "vpl_anualizado": 50869.329517,
+        "decisao": "viável (VPL > 0)"
+      }
+    }
+  },
+  "sensibilidade": {
+    "A": {
+      "vpl_base": 38596.381875,
+      "fluxos_base": [
+        -5640.0,
+        6254.0,
+        13580.0,
+        13580.0,
+        13580.0,
+        13580.0
+      ],
+      "variacao": 0.2,
+      "tornado": [
+        {
+          "variavel": "beneficios",
+          "rotulo": "Benefícios / receitas",
+          "vpl_menos": 21628.187369,
+          "vpl_mais": 55564.57638,
+          "amplitude": 33936.389011
+        },
+        {
+          "variavel": "custos",
+          "rotulo": "Custos operacionais (OpEx)",
+          "vpl_menos": 46717.300005,
+          "vpl_mais": 30475.463744,
+          "amplitude": 16241.836261
+        },
+        {
+          "variavel": "taxa",
+          "rotulo": "TMA",
+          "vpl_menos": 41289.28085,
+          "vpl_mais": 36129.726373,
+          "amplitude": 5159.554476
+        },
+        {
+          "variavel": "investimento",
+          "rotulo": "Investimento inicial",
+          "vpl_menos": 39724.381875,
+          "vpl_mais": 37468.381875,
+          "amplitude": 2256.0
+        }
+      ],
+      "multiplicador_equilibrio_beneficios": 0.545074,
+      "tma_equilibrio": {
+        "status": "unica",
+        "tir": 1.589762,
+        "raizes": [
+          1.589762
+        ],
+        "trocas_sinal": 1,
+        "mensagem": "TIR única."
+      }
+    },
+    "B": {
+      "vpl_base": -49240.953125,
+      "fluxos_base": [
+        -93477.335,
+        6254.0,
+        13580.0,
+        13580.0,
+        13580.0,
+        13580.0
+      ],
+      "variacao": 0.2,
+      "tornado": [
+        {
+          "variavel": "investimento",
+          "rotulo": "Investimento inicial",
+          "vpl_menos": -30545.486125,
+          "vpl_mais": -67936.420125,
+          "amplitude": 37390.934
+        },
+        {
+          "variavel": "beneficios",
+          "rotulo": "Benefícios / receitas",
+          "vpl_menos": -66209.147631,
+          "vpl_mais": -32272.75862,
+          "amplitude": 33936.389011
+        },
+        {
+          "variavel": "custos",
+          "rotulo": "Custos operacionais (OpEx)",
+          "vpl_menos": -41120.034995,
+          "vpl_mais": -57361.871256,
+          "amplitude": 16241.836261
+        },
+        {
+          "variavel": "taxa",
+          "rotulo": "TMA",
+          "vpl_menos": -46548.05415,
+          "vpl_mais": -51707.608627,
+          "amplitude": 5159.554476
+        }
+      ],
+      "multiplicador_equilibrio_beneficios": 1.580391,
+      "tma_equilibrio": {
+        "status": "unica",
+        "tir": -0.121444,
+        "raizes": [
+          -0.121444
+        ],
+        "trocas_sinal": 1,
+        "mensagem": "TIR única."
+      }
+    }
+  },
+  "faixa_tma": [
+    {
+      "tma_nominal": 0.12,
+      "tma_real": 0.07177,
+      "vpl_a": 42942.32093,
+      "vpl_b": -44895.01407
+    },
+    {
+      "tma_nominal": 0.2,
+      "tma_real": 0.148325,
+      "vpl_a": 33683.621568,
+      "vpl_b": -54153.713432
+    }
+  ],
+  "equilibrio_horas_usuario_mes": {
+    "A": 1.428403,
+    "B": 7.280822
+  },
+  "depreciacao": {
+    "ativos": [
+      {
+        "nome": "Notebook de desenvolvimento (cada)",
+        "custo": 5000,
+        "vida_anos": 5,
+        "linear": [
+          1000.0,
+          1000.0,
+          1000.0,
+          1000.0,
+          1000.0
+        ],
+        "soma_digitos": [
+          1666.666667,
+          1333.333333,
+          1000.0,
+          666.666667,
+          333.333333
+        ]
+      },
+      {
+        "nome": "Servidor on-premises (alternativa de infraestrutura)",
+        "custo": 12000,
+        "vida_anos": 5,
+        "linear": [
+          2400.0,
+          2400.0,
+          2400.0,
+          2400.0,
+          2400.0
+        ],
+        "soma_digitos": [
+          4000.0,
+          3200.0,
+          2400.0,
+          1600.0,
+          800.0
+        ]
+      }
+    ]
+  },
+  "infra": {
+    "tma": 0.104689,
+    "criterio": "caue",
+    "alternativas": [
+      {
+        "nome": "Nuvem com camada gratuita (plano do projeto)",
+        "descricao": "",
+        "fluxos": [
+          -480.0,
+          -2200.0,
+          -2200.0,
+          -2200.0,
+          -2200.0,
+          -2200.0
+        ],
+        "vida": 5,
+        "vpl": -8720.784081,
+        "caue": -2328.143146,
+        "tir": {
+          "status": "sem_raiz",
+          "tir": null,
+          "raizes": [],
+          "trocas_sinal": 0,
+          "mensagem": "Todos os fluxos têm o mesmo sinal: não existe taxa que zere o VPL."
+        },
+        "custo_oportunidade": 0.0
+      },
+      {
+        "nome": "VM paga pequena em nuvem",
+        "descricao": "",
+        "fluxos": [
+          -480.0,
+          -3400.0,
+          -3400.0,
+          -3400.0,
+          -3400.0,
+          -3400.0
+        ],
+        "vida": 5,
+        "vpl": -13215.757216,
+        "caue": -3528.143146,
+        "tir": {
+          "status": "sem_raiz",
+          "tir": null,
+          "raizes": [],
+          "trocas_sinal": 0,
+          "mensagem": "Todos os fluxos têm o mesmo sinal: não existe taxa que zere o VPL."
+        },
+        "custo_oportunidade": 1200.0
+      },
+      {
+        "nome": "Servidor on-premises no laboratório",
+        "descricao": "",
+        "fluxos": [
+          -12960.0,
+          -2920.0,
+          -2920.0,
+          -2920.0,
+          -2920.0
+        ],
+        "vida": 4,
+        "vpl": -22122.8319,
+        "caue": -7050.07686,
+        "tir": {
+          "status": "sem_raiz",
+          "tir": null,
+          "raizes": [],
+          "trocas_sinal": 0,
+          "mensagem": "Todos os fluxos têm o mesmo sinal: não existe taxa que zere o VPL."
+        },
+        "custo_oportunidade": 4721.933714
+      }
+    ],
+    "escolha": "Nuvem com camada gratuita (plano do projeto)",
+    "justificativa": "vidas diferentes: maior VPL anualizado (CAUE)",
+    "matriz": {
+      "criterios": [
+        {
+          "nome": "custo",
+          "peso": 0.4
+        },
+        {
+          "nome": "risco operacional",
+          "peso": 0.3
+        },
+        {
+          "nome": "aderência institucional",
+          "peso": 0.2
+        },
+        {
+          "nome": "esforço de operação",
+          "peso": 0.1
+        }
+      ],
+      "notas": {
+        "Nuvem com camada gratuita (plano do projeto)": {
+          "custo": 9,
+          "risco operacional": 5,
+          "aderência institucional": 5,
+          "esforço de operação": 7
+        },
+        "VM paga pequena em nuvem": {
+          "custo": 7,
+          "risco operacional": 7,
+          "aderência institucional": 6,
+          "esforço de operação": 7
+        },
+        "Servidor on-premises no laboratório": {
+          "custo": 4,
+          "risco operacional": 6,
+          "aderência institucional": 8,
+          "esforço de operação": 4
+        }
+      },
+      "pontuacoes": {
+        "Nuvem com camada gratuita (plano do projeto)": 6.8,
+        "VM paga pequena em nuvem": 6.8,
+        "Servidor on-premises no laboratório": 5.4
+      },
+      "vencedora": "VM paga pequena em nuvem"
+    },
+    "notas_opcoes": {
+      "Nuvem com camada gratuita (plano do projeto)": "VM sem custo sujeita aos termos do provedor; 8 h de configuração; domínio, backup, reserva de migração e 2 h/mês de administração",
+      "VM paga pequena em nuvem": "VM de 2 vCPU e 4 GB por cerca de R$ 150/mês (hipótese), domínio, backup e 2 h/mês de administração",
+      "Servidor on-premises no laboratório": "Servidor de R$ 12.000 (vida econômica de 4 anos; a vida fiscal é de 5 anos, 20% a.a.), 16 h de configuração, energia e rateio, 3 h/mês de administração"
+    }
+  },
+  "construir_vs_comprar": {
+    "tma": 0.104689,
+    "criterio": "vpl",
+    "alternativas": [
+      {
+        "nome": "Sistema próprio (implantar e manter)",
+        "descricao": "",
+        "fluxos": [
+          -5640.0,
+          -10840.0,
+          -10840.0,
+          -10840.0,
+          -10840.0,
+          -10840.0
+        ],
+        "vida": 5,
+        "vpl": -46244.590652,
+        "caue": -12345.681969,
+        "tir": {
+          "status": "sem_raiz",
+          "tir": null,
+          "raizes": [],
+          "trocas_sinal": 0,
+          "mensagem": "Todos os fluxos têm o mesmo sinal: não existe taxa que zere o VPL."
+        },
+        "custo_oportunidade": 0.0
+      },
+      {
+        "nome": "LIMS de mercado (licenciar)",
+        "descricao": "",
+        "fluxos": [
+          -13240.0,
+          -14400.0,
+          -14400.0,
+          -14400.0,
+          -14400.0,
+          -14400.0
+        ],
+        "vida": 5,
+        "vpl": -67179.677619,
+        "caue": -17934.615118,
+        "tir": {
+          "status": "sem_raiz",
+          "tir": null,
+          "raizes": [],
+          "trocas_sinal": 0,
+          "mensagem": "Todos os fluxos têm o mesmo sinal: não existe taxa que zere o VPL."
+        },
+        "custo_oportunidade": 20935.086967
+      }
+    ],
+    "escolha": "Sistema próprio (implantar e manter)",
+    "justificativa": "vidas iguais: maior VPL",
+    "descricao": "Usar o sistema próprio já construído ou licenciar um sistema de gestão laboratorial (LIMS) de mercado com escopo comparável. Custo afundado do desenvolvimento excluído (decisão a partir de hoje).",
+    "nota": "Valores do LIMS são hipótese do grupo para um produto genérico de mercado, sem citar fornecedor; cotar antes de decidir."
+  },
+  "aposentadoria": [
+    {
+      "tma": 0.104689,
+      "criterio": "vpl",
+      "alternativas": [
+        {
+          "nome": "Manter como está",
+          "descricao": "",
+          "fluxos": [
+            0.0,
+            -600.0,
+            -600.0,
+            -600.0,
+            -600.0,
+            -600.0
+          ],
+          "vida": 5,
+          "vpl": -2247.486567,
+          "caue": -600.0,
+          "tir": {
+            "status": "sem_raiz",
+            "tir": null,
+            "raizes": [],
+            "trocas_sinal": 0,
+            "mensagem": "Todos os fluxos têm o mesmo sinal: não existe taxa que zere o VPL."
+          },
+          "custo_oportunidade": 943.743284
+        },
+        {
+          "nome": "Refatorar: persistir no servidor",
+          "descricao": "",
+          "fluxos": [
+            -1440.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "vida": 5,
+          "vpl": -1440.0,
+          "caue": -384.429439,
+          "tir": {
+            "status": "sem_raiz",
+            "tir": null,
+            "raizes": [],
+            "trocas_sinal": 0,
+            "mensagem": "Todos os fluxos têm o mesmo sinal: não existe taxa que zere o VPL."
+          },
+          "custo_oportunidade": 136.256716
+        },
+        {
+          "nome": "Aposentar: retirar a tela e controlar em planilha",
+          "descricao": "",
+          "fluxos": [
+            -180.0,
+            -300.0,
+            -300.0,
+            -300.0,
+            -300.0,
+            -300.0
+          ],
+          "vida": 5,
+          "vpl": -1303.743284,
+          "caue": -348.05368,
+          "tir": {
+            "status": "sem_raiz",
+            "tir": null,
+            "raizes": [],
+            "trocas_sinal": 0,
+            "mensagem": "Todos os fluxos têm o mesmo sinal: não existe taxa que zere o VPL."
+          },
+          "custo_oportunidade": 0.0
+        }
+      ],
+      "escolha": "Aposentar: retirar a tela e controlar em planilha",
+      "justificativa": "vidas iguais: maior VPL",
+      "componente": "Cadastro de scanners 3D (dados mantidos apenas no navegador)",
+      "notas_opcoes": {
+        "Manter como está": "valor esperado de perda ou divergência de registros (hipótese)",
+        "Refatorar: persistir no servidor": "24 h de desenvolvimento; elimina a perda",
+        "Aposentar: retirar a tela e controlar em planilha": "3 h para retirar; controle manual estimado"
+      }
+    },
+    {
+      "tma": 0.104689,
+      "criterio": "vpl",
+      "alternativas": [
+        {
+          "nome": "Manter como está",
+          "descricao": "",
+          "fluxos": [
+            0.0,
+            -400.0,
+            -400.0,
+            -400.0,
+            -400.0,
+            -400.0
+          ],
+          "vida": 5,
+          "vpl": -1498.324378,
+          "caue": -400.0,
+          "tir": {
+            "status": "sem_raiz",
+            "tir": null,
+            "raizes": [],
+            "trocas_sinal": 0,
+            "mensagem": "Todos os fluxos têm o mesmo sinal: não existe taxa que zere o VPL."
+          },
+          "custo_oportunidade": 629.162189
+        },
+        {
+          "nome": "Refatorar: concluir o fluxo de upload",
+          "descricao": "",
+          "fluxos": [
+            -960.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "vida": 5,
+          "vpl": -960.0,
+          "caue": -256.286293,
+          "tir": {
+            "status": "sem_raiz",
+            "tir": null,
+            "raizes": [],
+            "trocas_sinal": 0,
+            "mensagem": "Todos os fluxos têm o mesmo sinal: não existe taxa que zere o VPL."
+          },
+          "custo_oportunidade": 90.837811
+        },
+        {
+          "nome": "Aposentar: ocultar o recurso e manter termo em papel",
+          "descricao": "",
+          "fluxos": [
+            -120.0,
+            -200.0,
+            -200.0,
+            -200.0,
+            -200.0,
+            -200.0
+          ],
+          "vida": 5,
+          "vpl": -869.162189,
+          "caue": -232.035787,
+          "tir": {
+            "status": "sem_raiz",
+            "tir": null,
+            "raizes": [],
+            "trocas_sinal": 0,
+            "mensagem": "Todos os fluxos têm o mesmo sinal: não existe taxa que zere o VPL."
+          },
+          "custo_oportunidade": 0.0
+        }
+      ],
+      "escolha": "Aposentar: ocultar o recurso e manter termo em papel",
+      "justificativa": "vidas iguais: maior VPL",
+      "componente": "Anexo de termo de recebimento de amostra (fluxo incompleto)",
+      "notas_opcoes": {
+        "Manter como está": "confusão de uso e arquivamento paralelo (hipótese)",
+        "Refatorar: concluir o fluxo de upload": "16 h, reaproveitando o padrão de documentos de máquina",
+        "Aposentar: ocultar o recurso e manter termo em papel": "2 h; arquivamento manual"
+      }
+    }
+  ],
+  "backlog": {
+    "itens": [
+      {
+        "id": "a",
+        "titulo": "Aprimorar o gerenciamento de sessão de usuário",
+        "valor": 8,
+        "esforco_horas": 2,
+        "criticidade_tempo": 8,
+        "reducao_risco": 8,
+        "confianca": 9,
+        "valor_anual": 1500,
+        "justificativa": "Boa prática de produto para computadores compartilhados do laboratório; mudança pequena no frontend",
+        "custo": 120.0,
+        "razao_valor_esforco": 4.0,
+        "quadrante": "ganho rápido",
+        "wsjf": 96.0,
+        "ice": 630.0,
+        "facilidade": 8.75,
+        "custo_atraso_mensal": 125.0,
+        "vpl_item": 5498.716419,
+        "posicao": 1,
+        "decisao": "fazer neste ciclo"
+      },
+      {
+        "id": "f",
+        "titulo": "Preservar a data de criação ao editar ordem de serviço",
+        "valor": 7,
+        "esforco_horas": 2,
+        "criticidade_tempo": 7,
+        "reducao_risco": 5,
+        "confianca": 9,
+        "valor_anual": 1200,
+        "justificativa": "Mantém a receita no mês correto dos relatórios",
+        "custo": 120.0,
+        "razao_valor_esforco": 3.5,
+        "quadrante": "ganho rápido",
+        "wsjf": 76.0,
+        "ice": 551.25,
+        "facilidade": 8.75,
+        "custo_atraso_mensal": 100.0,
+        "vpl_item": 4374.973135,
+        "posicao": 2,
+        "decisao": "fazer neste ciclo"
+      },
+      {
+        "id": "d",
+        "titulo": "Calcular a conformidade ambiental no servidor a partir das faixas de referência",
+        "valor": 7,
+        "esforco_horas": 6,
+        "criticidade_tempo": 6,
+        "reducao_risco": 7,
+        "confianca": 8,
+        "valor_anual": 1500,
+        "justificativa": "Comparação automática com 20 ± 2 °C e 45 a 65% de umidade apoia a ISO/IEC 17025",
+        "custo": 360.0,
+        "razao_valor_esforco": 1.166667,
+        "quadrante": "ganho rápido",
+        "wsjf": 26.666667,
+        "ice": 379.052625,
+        "facilidade": 6.768797,
+        "custo_atraso_mensal": 125.0,
+        "vpl_item": 5258.716419,
+        "posicao": 3,
+        "decisao": "fazer neste ciclo"
+      },
+      {
+        "id": "c",
+        "titulo": "Concluir o registro de ligar e desligar máquina de ponta a ponta",
+        "valor": 5,
+        "esforco_horas": 8,
+        "criticidade_tempo": 4,
+        "reducao_risco": 3,
+        "confianca": 8,
+        "valor_anual": 720,
+        "justificativa": "Uso de máquina alimenta indicadores; requer grupos de validação distintos para criar e atualizar",
+        "custo": 480.0,
+        "razao_valor_esforco": 0.625,
+        "quadrante": "preenchimento",
+        "wsjf": 12.0,
+        "ice": 250.0,
+        "facilidade": 6.25,
+        "custo_atraso_mensal": 60.0,
+        "vpl_item": 2216.983881,
+        "posicao": 4,
+        "decisao": "fazer neste ciclo"
+      },
+      {
+        "id": "l",
+        "titulo": "Documentar a API com OpenAPI",
+        "valor": 3,
+        "esforco_horas": 6,
+        "criticidade_tempo": 2,
+        "reducao_risco": 1,
+        "confianca": 8,
+        "valor_anual": 300,
+        "justificativa": "Facilita integração e manutenção por outra equipe de TI",
+        "custo": 360.0,
+        "razao_valor_esforco": 0.5,
+        "quadrante": "preenchimento",
+        "wsjf": 8.0,
+        "ice": 162.451125,
+        "facilidade": 6.768797,
+        "custo_atraso_mensal": 25.0,
+        "vpl_item": 763.743284,
+        "posicao": 5,
+        "decisao": "fazer neste ciclo"
+      },
+      {
+        "id": "e",
+        "titulo": "Máquina de estados da ordem de serviço com validação de transições",
+        "valor": 6,
+        "esforco_horas": 12,
+        "criticidade_tempo": 5,
+        "reducao_risco": 5,
+        "confianca": 7,
+        "valor_anual": 900,
+        "justificativa": "Status hoje é texto validado no banco; transições explícitas melhoram qualidade de dados e mensagens",
+        "custo": 720.0,
+        "razao_valor_esforco": 0.5,
+        "quadrante": "ganho rápido",
+        "wsjf": 10.666667,
+        "ice": 231.789469,
+        "facilidade": 5.518797,
+        "custo_atraso_mensal": 75.0,
+        "vpl_item": 2651.229851,
+        "posicao": 6,
+        "decisao": "fazer neste ciclo"
+      },
+      {
+        "id": "i",
+        "titulo": "Provisionar VM, domínio e backup externo e colocar em produção",
+        "valor": 10,
+        "esforco_horas": 24,
+        "criticidade_tempo": 10,
+        "reducao_risco": 8,
+        "confianca": 9,
+        "valor_anual": 13580.0,
+        "justificativa": "Pré-requisito de todos os benefícios (as mesmas 24 h já estão no investimento de implantação); valor anual igual ao benefício líquido anual em regime (ano 2) do cenário base, calculado pelo modelo",
+        "custo": 1440.0,
+        "razao_valor_esforco": 0.416667,
+        "quadrante": "projeto estratégico",
+        "wsjf": 9.333333,
+        "ice": 384.191719,
+        "facilidade": 4.268797,
+        "custo_atraso_mensal": 1131.666667,
+        "vpl_item": 49428.112644,
+        "posicao": 7,
+        "decisao": "fazer neste ciclo"
+      },
+      {
+        "id": "k",
+        "titulo": "Testes de interface ponta a ponta dos 5 fluxos críticos",
+        "valor": 5,
+        "esforco_horas": 16,
+        "criticidade_tempo": 4,
+        "reducao_risco": 6,
+        "confianca": 7,
+        "valor_anual": 1200,
+        "justificativa": "Protege a evolução contra regressões; escopo limitado pelo princípio bom o suficiente (ver análise abaixo)",
+        "custo": 960.0,
+        "razao_valor_esforco": 0.3125,
+        "quadrante": "preenchimento",
+        "wsjf": 7.5,
+        "ice": 175.0,
+        "facilidade": 5.0,
+        "custo_atraso_mensal": 100.0,
+        "vpl_item": 3534.973135,
+        "posicao": 8,
+        "decisao": "fazer neste ciclo"
+      },
+      {
+        "id": "b",
+        "titulo": "Persistir o cadastro de scanners 3D no servidor",
+        "valor": 4,
+        "esforco_horas": 24,
+        "criticidade_tempo": 3,
+        "reducao_risco": 4,
+        "confianca": 7,
+        "valor_anual": 600,
+        "justificativa": "Hoje o cadastro fica no navegador; exige entidade, migração, API e ajuste de tela",
+        "custo": 1440.0,
+        "razao_valor_esforco": 0.166667,
+        "quadrante": "evitar",
+        "wsjf": 3.666667,
+        "ice": 119.526312,
+        "facilidade": 4.268797,
+        "custo_atraso_mensal": 50.0,
+        "vpl_item": 807.486567,
+        "posicao": 9,
+        "decisao": "próximo ciclo (VPL positivo, sem capacidade agora)"
+      },
+      {
+        "id": "h",
+        "titulo": "Geração de relatórios PDF no servidor",
+        "valor": 4,
+        "esforco_horas": 40,
+        "criticidade_tempo": 3,
+        "reducao_risco": 2,
+        "confianca": 6,
+        "valor_anual": 900,
+        "justificativa": "Hoje a impressão é feita pelo navegador; ganho de padronização",
+        "custo": 2400.0,
+        "razao_valor_esforco": 0.1,
+        "quadrante": "evitar",
+        "wsjf": 1.8,
+        "ice": 80.342157,
+        "facilidade": 3.34759,
+        "custo_atraso_mensal": 75.0,
+        "vpl_item": 971.229851,
+        "posicao": 10,
+        "decisao": "próximo ciclo (VPL positivo, sem capacidade agora)"
+      },
+      {
+        "id": "g",
+        "titulo": "Módulo de calibração com certificados e incerteza de medição",
+        "valor": 8,
+        "esforco_horas": 120,
+        "criticidade_tempo": 5,
+        "reducao_risco": 7,
+        "confianca": 5,
+        "valor_anual": 6000,
+        "justificativa": "Maior lacuna funcional para a 17025; escopo grande e incerto",
+        "custo": 7200.0,
+        "razao_valor_esforco": 0.066667,
+        "quadrante": "projeto estratégico",
+        "wsjf": 1.333333,
+        "ice": 54.65547,
+        "facilidade": 1.366387,
+        "custo_atraso_mensal": 500.0,
+        "vpl_item": 15274.865675,
+        "posicao": 11,
+        "decisao": "próximo ciclo (VPL positivo, sem capacidade agora)"
+      },
+      {
+        "id": "j",
+        "titulo": "Multi-tenancy para oferta SaaS",
+        "valor": 3,
+        "esforco_horas": 200,
+        "criticidade_tempo": 1,
+        "reducao_risco": 0,
+        "confianca": 4,
+        "valor_anual": 0,
+        "justificativa": "Decisão registrada de não implementar; só faz sentido se a opção SaaS for escolhida",
+        "decisao_fixa": "não fazer (decisão registrada; reavaliar só se a opção SaaS for aprovada)",
+        "custo": 12000.0,
+        "razao_valor_esforco": 0.015,
+        "quadrante": "evitar",
+        "wsjf": 0.16,
+        "ice": 12.0,
+        "facilidade": 1.0,
+        "custo_atraso_mensal": 0.0,
+        "vpl_item": -12000.0,
+        "posicao": 12,
+        "decisao": "não fazer (decisão registrada; reavaliar só se a opção SaaS for aprovada)"
+      }
+    ],
+    "horas_comprometidas": 76.0,
+    "capacidade_horas": 80,
+    "fator_serie": 3.745811,
+    "ranking_valor_esforco": [
+      "a",
+      "f",
+      "d",
+      "c",
+      "l",
+      "e",
+      "i",
+      "k",
+      "b",
+      "h",
+      "g",
+      "j"
+    ],
+    "ranking_wsjf": [
+      "a",
+      "f",
+      "d",
+      "c",
+      "e",
+      "i",
+      "l",
+      "k",
+      "b",
+      "h",
+      "g",
+      "j"
+    ],
+    "ranking_ice": [
+      "a",
+      "f",
+      "i",
+      "d",
+      "c",
+      "e",
+      "k",
+      "l",
+      "b",
+      "h",
+      "g",
+      "j"
+    ],
+    "bom_o_suficiente": {
+      "nivel_escolhido": "5 fluxos críticos (login, OS, amostra, documento, relatório)",
+      "indice": 1,
+      "marginais": [
+        {
+          "nivel": "5 fluxos críticos (login, OS, amostra, documento, relatório)",
+          "custo_marginal": 960,
+          "beneficio_marginal": 3000
+        },
+        {
+          "nivel": "Todas as 22 telas",
+          "custo_marginal": 1440,
+          "beneficio_marginal": 800
+        },
+        {
+          "nivel": "Todas as telas + regressão visual nos 2 temas e 3 idiomas",
+          "custo_marginal": 2400,
+          "beneficio_marginal": 500
+        }
+      ]
+    },
+    "niveis": [
+      {
+        "nome": "Sem testes de interface (só testes de API e serviço atuais)",
+        "custo": 0,
+        "beneficio": 0
+      },
+      {
+        "nome": "5 fluxos críticos (login, OS, amostra, documento, relatório)",
+        "custo": 960,
+        "beneficio": 3000
+      },
+      {
+        "nome": "Todas as 22 telas",
+        "custo": 2400,
+        "beneficio": 3800
+      },
+      {
+        "nome": "Todas as telas + regressão visual nos 2 temas e 3 idiomas",
+        "custo": 4800,
+        "beneficio": 4300
+      }
+    ]
+  },
+  "gva": {
+    "modo": "agil",
+    "bac": 12000.0,
+    "periodos": [
+      {
+        "pv": 3000.0,
+        "ev": 2511.627907,
+        "ac": 3240.0,
+        "bac": 12000.0,
+        "cv": -728.372093,
+        "sv": -488.372093,
+        "cpi": 0.775194,
+        "spi": 0.837209,
+        "eac_cpi": 15480.0,
+        "eac_orcado": 12728.372093,
+        "eac_cpi_spi": 17860.0,
+        "etc": 12240.0,
+        "vac": -3480.0,
+        "tcpi_bac": 1.083147,
+        "tcpi_eac": 0.775194,
+        "percentual_concluido": 0.209302,
+        "percentual_gasto": 0.27,
+        "pontos_acumulados": 18.0,
+        "nome": "Jul/2026",
+        "leitura": "cada R$ 1,00 gasto entregou só R$ 0,78 de valor (acima do orçamento); o escopo entregue está 16,3% atrás do planejado."
+      },
+      {
+        "pv": 6000.0,
+        "ev": 8372.093023,
+        "ac": 8640.0,
+        "bac": 12000.0,
+        "cv": -267.906977,
+        "sv": 2372.093023,
+        "cpi": 0.968992,
+        "spi": 1.395349,
+        "eac_cpi": 12384.0,
+        "eac_orcado": 12267.906977,
+        "eac_cpi_spi": 11323.2,
+        "etc": 3744.0,
+        "vac": -384.0,
+        "tcpi_bac": 1.079734,
+        "tcpi_eac": 0.968992,
+        "percentual_concluido": 0.697674,
+        "percentual_gasto": 0.72,
+        "pontos_acumulados": 60.0,
+        "nome": "Ago/2026",
+        "leitura": "cada R$ 1,00 gasto entregou só R$ 0,97 de valor (acima do orçamento); o escopo entregue está 39,5% à frente do planejado."
+      },
+      {
+        "pv": 9000.0,
+        "ev": 8651.162791,
+        "ac": 9180.0,
+        "bac": 12000.0,
+        "cv": -528.837209,
+        "sv": -348.837209,
+        "cpi": 0.942392,
+        "spi": 0.96124,
+        "eac_cpi": 12733.548387,
+        "eac_orcado": 12528.837209,
+        "eac_cpi_spi": 12876.836629,
+        "etc": 3553.548387,
+        "vac": -733.548387,
+        "tcpi_bac": 1.187531,
+        "tcpi_eac": 0.942392,
+        "percentual_concluido": 0.72093,
+        "percentual_gasto": 0.765,
+        "pontos_acumulados": 62.0,
+        "nome": "Set/2026",
+        "leitura": "cada R$ 1,00 gasto entregou só R$ 0,94 de valor (acima do orçamento); o escopo entregue está 3,9% atrás do planejado."
+      },
+      {
+        "pv": 12000.0,
+        "ev": 9767.44186,
+        "ac": 11340.0,
+        "bac": 12000.0,
+        "cv": -1572.55814,
+        "sv": -2232.55814,
+        "cpi": 0.861326,
+        "spi": 0.813953,
+        "eac_cpi": 13932.0,
+        "eac_orcado": 13572.55814,
+        "eac_cpi_spi": 14524.457143,
+        "etc": 2592.0,
+        "vac": -1932.0,
+        "tcpi_bac": 3.382664,
+        "tcpi_eac": 0.861326,
+        "percentual_concluido": 0.813953,
+        "percentual_gasto": 0.945,
+        "pontos_acumulados": 70.0,
+        "nome": "Out/2026 (inclui Sprint 5)",
+        "leitura": "cada R$ 1,00 gasto entregou só R$ 0,86 de valor (acima do orçamento); o escopo entregue está 18,6% atrás do planejado; para fechar no orçamento original seria preciso eficiência 3,38 no restante, o que é irrealista: replaneje pelo EAC."
+      },
+      {
+        "pv": 12000.0,
+        "ev": 10186.046512,
+        "ac": 11880.0,
+        "bac": 12000.0,
+        "cv": -1693.953488,
+        "sv": -1813.953488,
+        "cpi": 0.857411,
+        "spi": 0.848837,
+        "eac_cpi": 13995.616438,
+        "eac_orcado": 13693.953488,
+        "eac_cpi_spi": 14372.370051,
+        "etc": 2115.616438,
+        "vac": -1995.616438,
+        "tcpi_bac": 15.116279,
+        "tcpi_eac": 0.857411,
+        "percentual_concluido": 0.848837,
+        "percentual_gasto": 0.99,
+        "pontos_acumulados": 73.0,
+        "nome": "Nov/2026 (até 04/11)",
+        "leitura": "cada R$ 1,00 gasto entregou só R$ 0,86 de valor (acima do orçamento); o escopo entregue está 15,1% atrás do planejado; para fechar no orçamento original seria preciso eficiência 15,12 no restante, o que é irrealista: replaneje pelo EAC."
+      }
+    ],
+    "final": {
+      "pv": 12000.0,
+      "ev": 10186.046512,
+      "ac": 11880.0,
+      "bac": 12000.0,
+      "cv": -1693.953488,
+      "sv": -1813.953488,
+      "cpi": 0.857411,
+      "spi": 0.848837,
+      "eac_cpi": 13995.616438,
+      "eac_orcado": 13693.953488,
+      "eac_cpi_spi": 14372.370051,
+      "etc": 2115.616438,
+      "vac": -1995.616438,
+      "tcpi_bac": 15.116279,
+      "tcpi_eac": 0.857411,
+      "percentual_concluido": 0.848837,
+      "percentual_gasto": 0.99,
+      "pontos_acumulados": 73.0,
+      "nome": "Nov/2026 (até 04/11)",
+      "leitura": "cada R$ 1,00 gasto entregou só R$ 0,86 de valor (acima do orçamento); o escopo entregue está 15,1% atrás do planejado; para fechar no orçamento original seria preciso eficiência 15,12 no restante, o que é irrealista: replaneje pelo EAC."
+    },
+    "duracao_estimada": 4.712329,
+    "pontos_totais": 86,
+    "taxa_hora": 60.0,
+    "pacotes": [
+      {
+        "id": "P1",
+        "nome": "Infraestrutura de base: versionamento de esquema, suíte de testes, backup, Docker e CI",
+        "pontos": 13,
+        "mes_concluido": "2026-07"
+      },
+      {
+        "id": "P2",
+        "nome": "Papéis de acesso e endurecimento inicial",
+        "pontos": 5,
+        "mes_concluido": "2026-07"
+      },
+      {
+        "id": "P3",
+        "nome": "Internacionalização completa e tema acessível (WCAG AA)",
+        "pontos": 8,
+        "mes_concluido": "2026-08"
+      },
+      {
+        "id": "P4",
+        "nome": "Conformidade com padrões institucionais, criptografia de dados pessoais e auditoria",
+        "pontos": 8,
+        "mes_concluido": "2026-08"
+      },
+      {
+        "id": "P5",
+        "nome": "Módulo de clientes, catálogo de serviços e notificações",
+        "pontos": 8,
+        "mes_concluido": "2026-08"
+      },
+      {
+        "id": "P6",
+        "nome": "Normalização e validação de todos os campos (6 fases)",
+        "pontos": 13,
+        "mes_concluido": "2026-08"
+      },
+      {
+        "id": "P7",
+        "nome": "Dashboard de receita por cliente e vínculo de campos",
+        "pontos": 5,
+        "mes_concluido": "2026-08"
+      },
+      {
+        "id": "P8",
+        "nome": "Estabilização do CI e documentação",
+        "pontos": 2,
+        "mes_concluido": "2026-09"
+      },
+      {
+        "id": "P9",
+        "nome": "Melhorias de eventos, indicadores, dados de demonstração e hierarquia de acesso",
+        "pontos": 5,
+        "mes_concluido": "2026-10"
+      },
+      {
+        "id": "P10",
+        "nome": "Sprint 5 (issues #13 a #18)",
+        "pontos": 3,
+        "mes_concluido": "2026-10"
+      },
+      {
+        "id": "P11",
+        "nome": "Refinamento de interface e acessibilidade",
+        "pontos": 3,
+        "mes_concluido": "2026-11"
+      },
+      {
+        "id": "P12",
+        "nome": "Implantação em produção (VM, domínio, backup externo, treinamento)",
+        "pontos": 8,
+        "mes_concluido": null
+      },
+      {
+        "id": "P13",
+        "nome": "Conclusão de fluxos pendentes (registro de máquina, anexo de termo de amostra)",
+        "pontos": 5,
+        "mes_concluido": null
+      }
+    ],
+    "bac_horas": 200,
+    "bac_nota": "Plano de referência reconstruído: 2 desenvolvedores x cerca de 6 h/semana x 17 semanas (jul a out/2026), arredondado para 200 h."
+  },
+  "negocio": {
+    "tma_negocio": 0.193064,
+    "tma_negocio_mensal": 0.014819,
+    "valor_percebido_lab_ano": 24420.0,
+    "saas": {
+      "custo_variavel_cliente_mes": 240.0,
+      "custo_fixo_ano": 12040.0,
+      "precificacao_custo": {
+        "diretos": [],
+        "indiretos": [
+          {
+            "descricao": "Custo variável por cliente-mês",
+            "valor": 240.0,
+            "rateio": 1.0,
+            "custo": 240.0
+          },
+          {
+            "descricao": "Custo fixo mensal rateado por 8 clientes",
+            "valor": 1003.333333,
+            "rateio": 0.125,
+            "custo": 125.416667
+          }
+        ],
+        "custo_direto": 0,
+        "custo_indireto": 365.416667,
+        "custo_total": 365.416667,
+        "markup": 0.428571,
+        "margem_equivalente_ao_markup": 0.3,
+        "margem": 0.3,
+        "tributos": 0.06,
+        "precos": {
+          "markup_sobre_custo": 522.02381,
+          "margem_sobre_preco": 522.02381,
+          "markup_divisor_com_tributos": 570.963542,
+          "preco_minimo": 388.741135
+        },
+        "valor_percebido": {
+          "valor": 2035.0,
+          "preco_referencia": 570.963542,
+          "captura_de_valor": 0.280572,
+          "faixa_negociacao": [
+            388.741135,
+            2035.0
+          ],
+          "leitura": "o preço por custo fica abaixo do valor percebido: há espaço para precificar por valor"
+        }
+      },
+      "preco_valor": 712.25,
+      "preco_adotado": 700,
+      "margem_bruta": 0.597143,
+      "metricas": {
+        "churn_mensal": 0.015,
+        "vida_media_meses": 66.666667,
+        "cac": 3000,
+        "ltv_simples": 27866.666667,
+        "ltv_descontado": 14017.84338,
+        "taxa_mensal": 0.014819,
+        "payback_cac_meses": 7.177033,
+        "ltv_cac": 4.672614,
+        "leitura": "relação saudável (LTV/CAC >= 3)",
+        "projecao": [
+          {
+            "novos": 1,
+            "perdidos": 0.078511,
+            "ativos_fim": 0.921489,
+            "receita": 4308.885989
+          },
+          {
+            "novos": 2,
+            "perdidos": 0.309867,
+            "ativos_fim": 2.611622,
+            "receita": 15643.573685
+          },
+          {
+            "novos": 3,
+            "perdidos": 0.668717,
+            "ativos_fim": 4.942904,
+            "receita": 32838.707187
+          },
+          {
+            "novos": 3,
+            "perdidos": 1.055403,
+            "ativos_fim": 6.887502,
+            "receita": 50613.339896
+          },
+          {
+            "novos": 3,
+            "perdidos": 1.377949,
+            "ativos_fim": 8.509553,
+            "receita": 65439.729264
+          }
+        ]
+      },
+      "linhas": [
+        {
+          "ano": 1,
+          "receita": 4308.885989,
+          "tributos": 258.533159,
+          "variavel": 1477.332339,
+          "fixo": 12040.0,
+          "aquisicao": 3000,
+          "liquido": -12466.979509,
+          "ativos_fim": 0.921489
+        },
+        {
+          "ano": 2,
+          "receita": 15643.573685,
+          "tributos": 938.614421,
+          "variavel": 5363.510978,
+          "fixo": 12040.0,
+          "aquisicao": 6000,
+          "liquido": -8698.551714,
+          "ativos_fim": 2.611622
+        },
+        {
+          "ano": 3,
+          "receita": 32838.707187,
+          "tributos": 1970.322431,
+          "variavel": 11258.985321,
+          "fixo": 12040.0,
+          "aquisicao": 9000,
+          "liquido": -1430.600565,
+          "ativos_fim": 4.942904
+        },
+        {
+          "ano": 4,
+          "receita": 50613.339896,
+          "tributos": 3036.800394,
+          "variavel": 17353.145107,
+          "fixo": 12040.0,
+          "aquisicao": 9000,
+          "liquido": 9183.394395,
+          "ativos_fim": 6.887502
+        },
+        {
+          "ano": 5,
+          "receita": 65439.729264,
+          "tributos": 3926.383756,
+          "variavel": 22436.478605,
+          "fixo": 12040.0,
+          "aquisicao": 9000,
+          "liquido": 18036.866903,
+          "ativos_fim": 8.509553
+        }
+      ],
+      "capex": 17400.0
+    },
+    "implantacao_suporte": {
+      "linhas": [
+        {
+          "ano": 1,
+          "receita": 10820.383625,
+          "tributos": 649.223017,
+          "variavel": 4728.15345,
+          "fixo": 5760.0,
+          "aquisicao": 3000,
+          "liquido": -3316.992843,
+          "ativos_fim": 0.946793
+        },
+        {
+          "ano": 2,
+          "receita": 15612.62615,
+          "tributos": 936.757569,
+          "variavel": 6645.05046,
+          "fixo": 5760.0,
+          "aquisicao": 3000,
+          "liquido": -729.181879,
+          "ativos_fim": 1.786015
+        },
+        {
+          "ano": 3,
+          "receita": 30680.781051,
+          "tributos": 1840.846863,
+          "variavel": 13072.31242,
+          "fixo": 5760.0,
+          "aquisicao": 6000,
+          "liquido": 4007.621767,
+          "ativos_fim": 3.476683
+        },
+        {
+          "ano": 4,
+          "receita": 39238.183774,
+          "tributos": 2354.291026,
+          "variavel": 16495.27351,
+          "fixo": 5760.0,
+          "aquisicao": 6000,
+          "liquido": 8628.619238,
+          "ativos_fim": 4.975264
+        },
+        {
+          "ano": 5,
+          "receita": 46823.336089,
+          "tributos": 2809.400165,
+          "variavel": 19529.334436,
+          "fixo": 5760.0,
+          "aquisicao": 6000,
+          "liquido": 12724.601488,
+          "ativos_fim": 6.303584
+        }
+      ],
+      "capex": 5400.0,
+      "metricas": {
+        "churn_mensal": 0.01,
+        "vida_media_meses": 100.0,
+        "cac": 3000,
+        "ltv_simples": 24300.0,
+        "ltv_descontado": 9790.83175,
+        "taxa_mensal": 0.014819,
+        "payback_cac_meses": 12.345679,
+        "ltv_cac": 3.263611,
+        "leitura": "relação saudável (LTV/CAC >= 3)"
+      }
+    },
+    "opcoes": {
+      "Uso interno institucional": {
+        "fluxos": [
+          -5640.0,
+          6254.0,
+          13580.0,
+          13580.0,
+          13580.0,
+          13580.0
+        ],
+        "taxa": 0.104689,
+        "descricao": "Economia de horas e riscos evitados no próprio laboratório (leitura A).",
+        "analise": {
+          "taxa": 0.104689,
+          "fluxos": [
+            -5640.0,
+            6254.0,
+            13580.0,
+            13580.0,
+            13580.0,
+            13580.0
+          ],
+          "vp_fluxos": [
+            -5640.0,
+            5661.321899,
+            11128.066561,
+            10073.483677,
+            9118.841339,
+            8254.668399
+          ],
+          "vpl": 38596.381875,
+          "tir": {
+            "status": "unica",
+            "tir": 1.589762,
+            "raizes": [
+              1.589762
+            ],
+            "trocas_sinal": 1,
+            "mensagem": "TIR única."
+          },
+          "tirm": 0.667785,
+          "payback_simples": {
+            "anos": 0.901823,
+            "status": "recupera",
+            "periodo_inteiro": 0,
+            "fracao": 0.901823,
+            "acumulado": [
+              -5640.0,
+              614.0,
+              14194.0,
+              27774.0,
+              41354.0,
+              54934.0
+            ],
+            "saldo_oscilou": false
+          },
+          "payback_descontado": {
+            "anos": 0.996234,
+            "status": "recupera",
+            "periodo_inteiro": 0,
+            "fracao": 0.996234,
+            "acumulado": [
+              -5640.0,
+              21.321899,
+              11149.38846,
+              21222.872137,
+              30341.713476,
+              38596.381875
+            ],
+            "saldo_oscilou": false
+          },
+          "indice_lucratividade": 7.84333,
+          "roi_nominal": 9.740071,
+          "roi_descontado": 6.84333,
+          "vpl_anualizado": 10303.878768,
+          "decisao": "viável (VPL > 0)"
+        }
+      },
+      "SaaS multi-laboratório": {
+        "fluxos": [
+          -17400.0,
+          -12466.979509,
+          -8698.551714,
+          -1430.600565,
+          9183.394395,
+          18036.866903
+        ],
+        "taxa": 0.193064,
+        "descricao": "Multi-tenancy (200 h) e adaptação para cobrança e isolamento (40 h) + acordo de licença com a instituição (R$ 3.000)",
+        "analise": {
+          "taxa": 0.193064,
+          "fluxos": [
+            -17400.0,
+            -12466.979509,
+            -8698.551714,
+            -1430.600565,
+            9183.394395,
+            18036.866903
+          ],
+          "vp_fluxos": [
+            -17400.0,
+            -10449.546973,
+            -6111.099902,
+            -842.416846,
+            4532.607402,
+            7461.775612
+          ],
+          "vpl": -22808.680707,
+          "tir": {
+            "status": "unica",
+            "tir": -0.096799,
+            "raizes": [
+              -0.096799
+            ],
+            "trocas_sinal": 1,
+            "mensagem": "TIR única."
+          },
+          "tirm": -0.035869,
+          "payback_simples": {
+            "anos": null,
+            "status": "nao_recupera",
+            "acumulado": [
+              -17400.0,
+              -29866.979509,
+              -38565.531223,
+              -39996.131788,
+              -30812.737393,
+              -12775.87049
+            ]
+          },
+          "payback_descontado": {
+            "anos": null,
+            "status": "nao_recupera",
+            "acumulado": [
+              -17400.0,
+              -27849.546973,
+              -33960.646875,
+              -34803.063721,
+              -30270.456319,
+              -22808.680707
+            ]
+          },
+          "indice_lucratividade": -0.310844,
+          "roi_nominal": -0.319428,
+          "roi_descontado": -0.655364,
+          "vpl_anualizado": -7510.670323,
+          "decisao": "inviável (VPL < 0)"
+        }
+      },
+      "Implantação e suporte (instância por laboratório)": {
+        "fluxos": [
+          -5400.0,
+          -3316.992843,
+          -729.181879,
+          4007.621767,
+          8628.619238,
+          12724.601488
+        ],
+        "taxa": 0.193064,
+        "descricao": "Empacotamento, manual de implantação (40 h) + acordo de licença (R$ 3.000)",
+        "analise": {
+          "taxa": 0.193064,
+          "fluxos": [
+            -5400.0,
+            -3316.992843,
+            -729.181879,
+            4007.621767,
+            8628.619238,
+            12724.601488
+          ],
+          "vp_fluxos": [
+            -5400.0,
+            -2780.230167,
+            -512.281062,
+            2359.909657,
+            4258.789478,
+            5264.11386
+          ],
+          "vpl": 3190.301767,
+          "tir": {
+            "status": "unica",
+            "tir": 0.295447,
+            "raizes": [
+              0.295447
+            ],
+            "trocas_sinal": 1,
+            "mensagem": "TIR única."
+          },
+          "tirm": 0.270043,
+          "payback_simples": {
+            "anos": 3.630292,
+            "status": "recupera",
+            "periodo_inteiro": 3,
+            "fracao": 0.630292,
+            "acumulado": [
+              -5400.0,
+              -8716.992843,
+              -9446.174722,
+              -5438.552954,
+              3190.066284,
+              15914.667772
+            ],
+            "saldo_oscilou": false
+          },
+          "payback_descontado": {
+            "anos": 4.393953,
+            "status": "recupera",
+            "periodo_inteiro": 4,
+            "fracao": 0.393953,
+            "acumulado": [
+              -5400.0,
+              -8180.230167,
+              -8692.511229,
+              -6332.601572,
+              -2073.812093,
+              3190.301767
+            ],
+            "saldo_oscilou": false
+          },
+          "indice_lucratividade": 1.590797,
+          "roi_nominal": 1.684774,
+          "roi_descontado": 0.367017,
+          "vpl_anualizado": 1050.534448,
+          "decisao": "viável (VPL > 0)"
+        }
+      }
+    },
+    "matriz": {
+      "criterios": [
+        {
+          "nome": "VPL",
+          "peso": 0.35
+        },
+        {
+          "nome": "risco",
+          "peso": 0.25
+        },
+        {
+          "nome": "aderência às decisões técnicas",
+          "peso": 0.2
+        },
+        {
+          "nome": "dependência de acordo de licença",
+          "peso": 0.1
+        },
+        {
+          "nome": "esforço da equipe",
+          "peso": 0.1
+        }
+      ],
+      "notas": {
+        "Uso interno institucional": {
+          "risco": 8,
+          "aderência às decisões técnicas": 10,
+          "dependência de acordo de licença": 10,
+          "esforço da equipe": 8,
+          "VPL": 10.0
+        },
+        "SaaS multi-laboratório": {
+          "risco": 3,
+          "aderência às decisões técnicas": 2,
+          "dependência de acordo de licença": 3,
+          "esforço da equipe": 3,
+          "VPL": 0.0
+        },
+        "Implantação e suporte (instância por laboratório)": {
+          "risco": 6,
+          "aderência às decisões técnicas": 9,
+          "dependência de acordo de licença": 4,
+          "esforço da equipe": 6,
+          "VPL": 4.234013
+        }
+      },
+      "pontuacoes": {
+        "Uso interno institucional": 9.3,
+        "SaaS multi-laboratório": 1.75,
+        "Implantação e suporte (instância por laboratório)": 5.781905
+      },
+      "vencedora": "Uso interno institucional"
+    },
+    "regimes_ano5_saas": {
+      "ativos": [],
+      "lucro_real": {
+        "lair": 18483.250659,
+        "imposto": 6284.305224,
+        "lucro_liquido": 12198.945435,
+        "fluxo_caixa": 15678.945435,
+        "escudo_fiscal": 1183.2
+      },
+      "simples": {
+        "imposto": 3926.383756,
+        "fluxo_caixa": 18036.866903,
+        "escudo_fiscal": 0.0
+      },
+      "presumido": {
+        "base_presumida": 20940.713365,
+        "irpj": 3141.107005,
+        "csll": 1884.664203,
+        "tributos_faturamento": 3697.344703,
+        "total": 8723.115911,
+        "carga_efetiva": 0.1333,
+        "fluxo_caixa": 13240.134748,
+        "escudo_fiscal": 0.0
+      }
+    },
+    "amortizacao_capex": 3480.0,
+    "notas": {
+      "licenca": "O repositório do sistema tem licença proprietária com uso acadêmico pelo SENAI FATESG; qualquer exploração comercial exige acordo prévio com a instituição.",
+      "multitenancy": "Multi-tenancy não foi implementado por decisão registrada; a opção SaaS exige esse investimento (CapEx)."
+    }
+  }
+}

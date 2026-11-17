@@ -1,0 +1,7 @@
+schema_version: "1.1"
+name: gva-sprint-projecao-eac
+expected_outcome: |
+  A resposta usa calc_gva.py e informa IDC (CPI) de cerca de 0,889, IDP (SPI) de 0,80, EAC = BAC/IDC de
+  R$ 1.125.000, as variantes EAC = CR + (BAC - VA) de R$ 1.050.000 e EAC = CR + (BAC - VA)/(IDC x IDP) de
+  R$ 1.293.750, VAC negativo de R$ 125.000 e TCPI de cerca de 1,09, explicando em linguagem simples que o
+  projeto está acima do custo e atrasado.
