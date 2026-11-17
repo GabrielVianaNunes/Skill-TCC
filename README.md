@@ -315,6 +315,10 @@ python scripts/validate_skill.py           # YAML, limites, links, evals, cópia
 
 Roteiro completo em [`docs/workshop-24-11.md`](docs/workshop-24-11.md): 15 minutos com duas demonstrações ao vivo no Claude Code (VPL clássico e TIR múltipla sem TMA), a valoração do TCC gerada na hora e perguntas prováveis. O checklist de pegadinhas cobertas pelos testes está em [`docs/pegadinhas.md`](docs/pegadinhas.md).
 
+## Contribuição e fluxo de trabalho
+
+O repositório segue o Git Flow, com `main` e `develop` protegidas e Pull Requests com CI obrigatório. Detalhes em [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## Créditos e licença
 
 Desenvolvido por **Gabriel Viana Nunes** e **João Vítor de Alencar Fraissat Mamede** para o componente Engenharia Econômica do curso de Engenharia de Software da Faculdade SENAI Fatesg, componente ministrado pelo docente Msc. Ujeverson Tavares Sampaio.
