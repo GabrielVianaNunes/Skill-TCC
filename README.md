@@ -230,27 +230,27 @@ Relatório completo: [`examples/tcc-valuation-report.md`](examples/tcc-valuation
 | Base importada (36.722 linhas a 45, 30 e 20 linhas/h) | 816 h | 1.224 h | 1.836 h |
 | Custo econômico do desenvolvimento (horas x R$ 48, 60 ou 84/h + indiretos) | R$ 45.983,49 | R$ 87.837,34 | R$ 187.921,73 |
 
-### Indicadores (TMA real de 10,47% a.a., 5 anos, valores reais)
+### Indicadores (TMA real de 12,99% a.a., 5 anos, valores reais)
 
-A TMA é hipótese do grupo: taxa base de 11% a.a. e prêmio de risco de 4% dão 15,44% nominal; com inflação de 4,5%, 10,47% real. **Substitua a taxa base pela vigente** e gere de novo.
+A taxa base é a Selic meta de 13,75% a.a. (decisão do Copom de 04/11/2026); com prêmio de risco de 4% (hipótese do grupo) a TMA nominal é de 18,30% e, com inflação de 4,7% (projeção do IPCA para 2027 na ata do Copom), a TMA real é de 12,99%. **Atualize a taxa base se a Selic mudar** e gere de novo.
 
 | Indicador (cenário base) | Leitura A: ativo a partir de hoje | Leitura B: viabilidade total |
 |---|---|---|
 | Investimento inicial | R$ 5.640,00 (implantação) | R$ 93.477,34 (implantação + desenvolvimento) |
-| VPL | **R$ 38.596,38** | **-R$ 49.240,95** |
+| VPL | **R$ 35.652,46** | **-R$ 52.184,88** |
 | TIR real | 158,98% | -12,14% |
-| TIRM | 66,78% | -4,88% |
+| TIRM | 68,25% | -4,04% |
 | Payback simples | 0,90 ano (10,8 meses) | não recupera em 5 anos |
-| Payback descontado | 1,00 ano (12,0 meses) | não recupera em 5 anos |
-| Índice de lucratividade | 7,84 | 0,47 |
+| Payback descontado | 1,01 ano (12,1 meses) | não recupera em 5 anos |
+| Índice de lucratividade | 7,32 | 0,44 |
 
 | Cenário | VPL Leitura A | VPL Leitura B |
 |---|---|---|
-| Pessimista (todos os extremos desfavoráveis) | -R$ 90.302,79 | -R$ 278.224,52 |
-| Base | R$ 38.596,38 | -R$ 49.240,95 |
-| Otimista (todos os extremos favoráveis) | R$ 236.530,39 | R$ 190.546,89 |
+| Pessimista (todos os extremos desfavoráveis) | -R$ 85.297,23 | -R$ 273.218,96 |
+| Base | R$ 35.652,46 | -R$ 52.184,88 |
+| Otimista (todos os extremos favoráveis) | R$ 221.076,09 | R$ 175.092,60 |
 
-**Leitura:** implantar vale a pena (o custo de desenvolvimento já foi incorrido). Como investimento total, o uso interno em um único laboratório não recupera o custo econômico do desenvolvimento em 5 anos; o VPL da Leitura B só zera com 7,3 h economizadas por usuário/mês (hipótese base: 4 h; a Leitura A empata com 1,4 h). A variável mais sensível da Leitura A são os benefícios; na Leitura B, o custo de desenvolvimento.
+**Leitura:** implantar vale a pena (o custo de desenvolvimento já foi incorrido). Como investimento total, o uso interno em um único laboratório não recupera o custo econômico do desenvolvimento em 5 anos; o VPL da Leitura B só zera com 7,7 h economizadas por usuário/mês (hipótese base: 4 h; a Leitura A empata com 1,5 h). A variável mais sensível da Leitura A são os benefícios; na Leitura B, o custo de desenvolvimento.
 
 ### GVA reconstruído (jul a nov/2026)
 
@@ -260,11 +260,11 @@ Só a Sprint 5 tem registro formal. O plano de referência (BAC de 200 h x R$ 60
 
 | Opção | TMA | VPL | TIR |
 |---|---|---|---|
-| Uso interno institucional (Leitura A) | 10,47% | R$ 38.596,38 | 158,98% |
-| Implantação e suporte, uma instância por laboratório | 19,31% | R$ 3.190,30 | 29,54% |
-| SaaS multi-laboratório (exige multi-tenancy como CapEx) | 19,31% | -R$ 22.808,68 | -9,68% |
+| Uso interno institucional (Leitura A) | 12,99% | R$ 35.652,46 | 158,98% |
+| Implantação e suporte, uma instância por laboratório | 22,03% | R$ 2.191,44 | 29,54% |
+| SaaS multi-laboratório (exige multi-tenancy como CapEx) | 22,03% | -R$ 23.437,93 | -9,68% |
 
-Preço do SaaS: piso de R$ 388,74/mês (custo + tributos), R$ 570,96 por markup divisor, R$ 712,25 por captura de 35% do valor percebido (R$ 2.035/mês por laboratório); adotado R$ 700. LTV/CAC de 4,67 (SaaS) e 3,26 (suporte). Matriz ponderada: uso interno 9,30; implantação e suporte 5,78; SaaS 1,75. A exploração comercial depende de acordo de licença com a instituição.
+Preço do SaaS: piso de R$ 388,74/mês (custo + tributos), R$ 570,96 por markup divisor, R$ 712,25 por captura de 35% do valor percebido (R$ 2.035/mês por laboratório); adotado R$ 700. LTV/CAC de 4,39 (SaaS) e 3,03 (suporte). Matriz ponderada: uso interno 9,30; implantação e suporte 5,82; SaaS 1,75. A exploração comercial depende de acordo de licença com a instituição.
 
 ### Decisões de engenharia e backlog
 

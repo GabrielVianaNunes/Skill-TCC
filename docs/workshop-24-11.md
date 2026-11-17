@@ -23,8 +23,8 @@ Duração sugerida: 15 minutos de apresentação e 5 de perguntas. Apresentadore
 
 ## Mensagens-chave
 
-- O sistema vale a pena a partir de hoje (Leitura A: VPL de R$ 38.596,38, payback descontado de 1 ano), mas o uso interno sozinho não paga o custo econômico do desenvolvimento em 5 anos (Leitura B: VPL de -R$ 49.240,95). Para empatar, seriam precisas 7,3 h economizadas por usuário/mês, contra 4 h na hipótese base.
-- O modelo de negócio externo mais coerente com as decisões técnicas é implantação e suporte com uma instância por laboratório (VPL de R$ 3.190,30), não SaaS (VPL negativo, exige multi-tenancy).
+- O sistema vale a pena a partir de hoje (Leitura A: VPL de R$ 35.652,46, payback descontado de 1,01 ano), mas o uso interno sozinho não paga o custo econômico do desenvolvimento em 5 anos (Leitura B: VPL de -R$ 52.184,88). Para empatar, seriam precisas 7,7 h economizadas por usuário/mês, contra 4 h na hipótese base.
+- O modelo de negócio externo mais coerente com as decisões técnicas é implantação e suporte com uma instância por laboratório (VPL de R$ 2.191,44), não SaaS (VPL negativo, exige multi-tenancy).
 - GVA: IDC 0,857 e IDP 0,849 em 04/11; a pendência de implantação em produção explica a maior parte do atraso.
 
 ## Perguntas prováveis e respostas curtas

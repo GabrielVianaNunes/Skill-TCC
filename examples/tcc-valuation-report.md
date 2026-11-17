@@ -12,25 +12,25 @@
 
 **Situação:** Sistema funcionalmente completo, ainda não implantado em produção. Não existe medição de ganho em uso real.
 
-**Recomendação:** implantar o sistema em produção (Leitura A com VPL de R$ 38.596,38 e payback descontado de 1,00 anos (12,0 meses)). Como investimento total (Leitura B), o uso interno isolado não recupera o custo econômico do desenvolvimento em 5 anos (VPL -R$ 49.240,95); a recuperação depende de ampliar o uso ou de um modelo de negócio externo (seção VI).
+**Recomendação:** implantar o sistema em produção (Leitura A com VPL de R$ 35.652,46 e payback descontado de 1,01 anos (12,1 meses)). Como investimento total (Leitura B), o uso interno isolado não recupera o custo econômico do desenvolvimento em 5 anos (VPL -R$ 52.184,88); a recuperação depende de ampliar o uso ou de um modelo de negócio externo (seção VI).
 
 | Indicador | Leitura A: ativo a partir de hoje | Leitura B: viabilidade total |
 |---|---|---|
 | O que entra no investimento inicial | implantação (desenvolvimento tratado como custo afundado) | implantação + custo econômico do desenvolvimento |
 | Investimento inicial | R$ 5.640,00 | R$ 93.477,34 |
-| VPL à TMA real de 10,47% | R$ 38.596,38 | -R$ 49.240,95 |
+| VPL à TMA real de 12,99% | R$ 35.652,46 | -R$ 52.184,88 |
 | TIR real | 158,98% | -12,14% |
-| TIRM (reinvestimento à TMA) | 66,78% | -4,88% |
+| TIRM (reinvestimento à TMA) | 68,25% | -4,04% |
 | Payback simples | 0,90 anos (10,8 meses) | não recupera no horizonte |
-| Payback descontado | 1,00 anos (12,0 meses) | não recupera no horizonte |
-| Índice de lucratividade | 7,84 | 0,47 |
-| VPL pessimista / otimista | -R$ 90.302,79 / R$ 236.530,39 | -R$ 278.224,52 / R$ 190.546,89 |
+| Payback descontado | 1,01 anos (12,1 meses) | não recupera no horizonte |
+| Índice de lucratividade | 7,32 | 0,44 |
+| VPL pessimista / otimista | -R$ 85.297,23 / R$ 221.076,09 | -R$ 273.218,96 / R$ 175.092,60 |
 
-**Justificativa de ROI.** O benefício anual em regime é de R$ 24.420,00 contra OpEx de R$ 10.840,00, um ganho líquido de R$ 13.580,00 por ano. Sobre o investimento de implantação de R$ 5.640,00, o ROI descontado em 5 anos é 684,33%. Para a Leitura B zerar o VPL seriam necessárias 7,3 h economizadas por usuário/mês (hipótese base: 4,0 h); para a Leitura A bastam 1,4 h.
+**Justificativa de ROI.** O benefício anual em regime é de R$ 24.420,00 contra OpEx de R$ 10.840,00, um ganho líquido de R$ 13.580,00 por ano. Sobre o investimento de implantação de R$ 5.640,00, o ROI descontado em 5 anos é 632,14%. Para a Leitura B zerar o VPL seriam necessárias 7,7 h economizadas por usuário/mês (hipótese base: 4,0 h); para a Leitura A bastam 1,5 h.
 
 **Eficiência da execução (GVA).** Na última data de status (Nov/2026 (até 04/11)), IDC (CPI) = 0,857 e IDP (SPI) = 0,849: cada R$ 1,00 gasto entregou só R$ 0,86 de valor (acima do orçamento); o escopo entregue está 15,1% atrás do planejado; para fechar no orçamento original seria preciso eficiência 15,12 no restante, o que é irrealista: replaneje pelo EAC. EAC (BAC/IDC) = R$ 13.995,62 para um BAC reconstruído de R$ 12.000,00.
 
-**Modelo de negócio.** Uso interno institucional: VPL R$ 38.596,38; SaaS multi-laboratório: VPL -R$ 22.808,68; Implantação e suporte (instância por laboratório): VPL R$ 3.190,30. Vencedora na matriz ponderada: Uso interno institucional.
+**Modelo de negócio.** Uso interno institucional: VPL R$ 35.652,46; SaaS multi-laboratório: VPL -R$ 23.437,93; Implantação e suporte (instância por laboratório): VPL R$ 2.191,44. Vencedora na matriz ponderada: Uso interno institucional.
 
 **Hipóteses que mais pesam.** custo da hora da equipe do laboratório, horas economizadas por usuário, número de usuários, horas de manutenção, taxa horária de desenvolvimento e TMA. Todas aparecem com faixa e forma de validação.
 
@@ -63,11 +63,11 @@ Cada linha diz de onde o número vem. **Origem** usa quatro rótulos: *medido no
 
 | Premissa | Base (provável) | Mínimo | Máximo | Origem | Como validar |
 |---|---|---|---|---|---|
-| Taxa de referência (base da TMA) | 11,00% |  |  | hipótese do grupo | Substituir pela taxa vigente (por exemplo, Selic ou custo de capital da instituição) informada pelo usuário |
+| Taxa de referência (base da TMA) | 13,75% |  |  | hipótese do grupo | Substituir pela taxa vigente (por exemplo, Selic ou custo de capital da instituição) informada pelo usuário |
 | Prêmios de risco | risco_do_projeto: 4,00% |  |  | hipótese do grupo | Discutir com a gestão o risco aceito para projetos internos |
-| Inflação anual esperada | 4,50% |  |  | hipótese de mercado | Usar a expectativa de mercado vigente (boletim Focus) |
-| TMA nominal composta | 15,44% | 12,00% | 20,00% | estimado | (1 + base) x (1 + prêmio) - 1 |
-| TMA real (Fisher), usada no desconto | 10,47% |  |  | estimado | (1 + nominal) / (1 + inflação) - 1 |
+| Inflação anual esperada | 4,70% |  |  | hipótese de mercado | Usar a expectativa de mercado vigente (boletim Focus) |
+| TMA nominal composta | 18,30% | 14,00% | 22,00% | estimado | (1 + base) x (1 + prêmio) - 1 |
+| TMA real (Fisher), usada no desconto | 12,99% |  |  | estimado | (1 + nominal) / (1 + inflação) - 1 |
 | Horizonte | 5 anos |  |  | hipótese do grupo | Vida útil esperada antes de reescrita relevante |
 | Rampa de adoção | 70%, 100%, 100%, 100%, 100% |  |  | hipótese do grupo | Medir uso real no 1º ano |
 | Tributos no uso interno | 0,00% |  |  | hipótese do grupo | Uso institucional sem receita tributável; validar o enquadramento da instituição com a contabilidade |
@@ -89,7 +89,7 @@ Cada linha diz de onde o número vem. **Origem** usa quatro rótulos: *medido no
 
 Derivação da taxa horária: salário mensal x (1 + 80% de encargos) / 150 h produtivas: R$ 4.000 (júnior) = 48; R$ 5.000 = 60; R$ 7.000 (pleno) = 84.
 
-Composição da TMA: TMA nominal = (1 + 11,00%) x (1 + 4,00%) - 1 = 15,44%; TMA real = (1 + 15,44%) / (1 + 4,50%) - 1 = 10,47% a.a. (equivalente a 0,8332% a.m.). Como todos os fluxos estão em preços constantes, o desconto usa a taxa real (consistência de Fisher).
+Composição da TMA: TMA nominal = (1 + 13,75%) x (1 + 4,00%) - 1 = 18,30%; TMA real = (1 + 18,30%) / (1 + 4,70%) - 1 = 12,99% a.a. (equivalente a 1,0229% a.m.). Como todos os fluxos estão em preços constantes, o desconto usa a taxa real (consistência de Fisher).
 
 ## 3. Esforço e custo de desenvolvimento
 
@@ -169,8 +169,8 @@ Fluxos anuais em valores reais, t = 0 na implantação, cenário base. Benefíci
 | (-) Investimento (CapEx e implantação) | -R$ 5.640,00 | R$ 0,00 | R$ 0,00 | R$ 0,00 | R$ 0,00 | R$ 0,00 |
 | **Fluxo líquido** | **-R$ 5.640,00** | **R$ 6.254,00** | **R$ 13.580,00** | **R$ 13.580,00** | **R$ 13.580,00** | **R$ 13.580,00** |
 | Acumulado simples | -R$ 5.640,00 | R$ 614,00 | R$ 14.194,00 | R$ 27.774,00 | R$ 41.354,00 | R$ 54.934,00 |
-| VP do fluxo | -R$ 5.640,00 | R$ 5.661,32 | R$ 11.128,07 | R$ 10.073,48 | R$ 9.118,84 | R$ 8.254,67 |
-| Acumulado descontado | -R$ 5.640,00 | R$ 21,32 | R$ 11.149,39 | R$ 21.222,87 | R$ 30.341,71 | R$ 38.596,38 |
+| VP do fluxo | -R$ 5.640,00 | R$ 5.535,03 | R$ 10.637,11 | R$ 9.414,25 | R$ 8.331,97 | R$ 7.374,11 |
+| Acumulado descontado | -R$ 5.640,00 | -R$ 104,97 | R$ 10.532,14 | R$ 19.946,38 | R$ 28.278,35 | R$ 35.652,46 |
 
 ### Leitura B: viabilidade total (desenvolvimento como investimento inicial)
 
@@ -186,27 +186,27 @@ Fluxos anuais em valores reais, t = 0 na implantação, cenário base. Benefíci
 | (-) Investimento (CapEx e implantação + desenvolvimento) | -R$ 93.477,34 | R$ 0,00 | R$ 0,00 | R$ 0,00 | R$ 0,00 | R$ 0,00 |
 | **Fluxo líquido** | **-R$ 93.477,34** | **R$ 6.254,00** | **R$ 13.580,00** | **R$ 13.580,00** | **R$ 13.580,00** | **R$ 13.580,00** |
 | Acumulado simples | -R$ 93.477,34 | -R$ 87.223,34 | -R$ 73.643,34 | -R$ 60.063,34 | -R$ 46.483,34 | -R$ 32.903,34 |
-| VP do fluxo | -R$ 93.477,34 | R$ 5.661,32 | R$ 11.128,07 | R$ 10.073,48 | R$ 9.118,84 | R$ 8.254,67 |
-| Acumulado descontado | -R$ 93.477,34 | -R$ 87.816,01 | -R$ 76.687,95 | -R$ 66.614,46 | -R$ 57.495,62 | -R$ 49.240,95 |
+| VP do fluxo | -R$ 93.477,34 | R$ 5.535,03 | R$ 10.637,11 | R$ 9.414,25 | R$ 8.331,97 | R$ 7.374,11 |
+| Acumulado descontado | -R$ 93.477,34 | -R$ 87.942,31 | -R$ 77.305,20 | -R$ 67.890,95 | -R$ 59.558,98 | -R$ 52.184,88 |
 
 ## II. VPL (Valor Presente Líquido)
 
-VPL = soma de F_t / (1 + i)^t, com i = TMA real de 10,47% a.a.
+VPL = soma de F_t / (1 + i)^t, com i = TMA real de 12,99% a.a.
 
 | Cenário | VPL Leitura A | Decisão A | VPL Leitura B | Decisão B |
 |---|---|---|---|---|
-| pessimista | -R$ 90.302,79 | inviável (VPL < 0) | -R$ 278.224,52 | inviável (VPL < 0) |
-| base | R$ 38.596,38 | viável (VPL > 0) | -R$ 49.240,95 | inviável (VPL < 0) |
-| otimista | R$ 236.530,39 | viável (VPL > 0) | R$ 190.546,89 | viável (VPL > 0) |
+| pessimista | -R$ 85.297,23 | inviável (VPL < 0) | -R$ 273.218,96 | inviável (VPL < 0) |
+| base | R$ 35.652,46 | viável (VPL > 0) | -R$ 52.184,88 | inviável (VPL < 0) |
+| otimista | R$ 221.076,09 | viável (VPL > 0) | R$ 175.092,60 | viável (VPL > 0) |
 
 Os cenários pessimista e otimista combinam todos os extremos ao mesmo tempo (teste de estresse); a probabilidade conjunta é baixa, por isso a decisão se apoia no cenário base, na sensibilidade e no ponto de equilíbrio.
 
 | TMA nominal | TMA real | VPL A | VPL B |
 |---|---|---|---|
-| 12,00% | 7,18% | R$ 42.942,32 | -R$ 44.895,01 |
-| 20,00% | 14,83% | R$ 33.683,62 | -R$ 54.153,71 |
+| 14,00% | 8,88% | R$ 40.614,51 | -R$ 47.222,82 |
+| 22,00% | 16,52% | R$ 32.000,24 | -R$ 55.837,10 |
 
-VPL anualizado (benefício anual uniforme equivalente) do cenário base: A = R$ 10.303,88/ano; B = -R$ 13.145,61/ano.
+VPL anualizado (benefício anual uniforme equivalente) do cenário base: A = R$ 10.133,91/ano; B = -R$ 14.833,12/ano.
 
 ## III. TIR (Taxa Interna de Retorno)
 
@@ -216,12 +216,12 @@ A TIR é obtida por varredura de -99% a 1000% e bissecção, com contagem de tro
 |---|---|---|---|---|---|---|
 | pessimista | A | sem_raiz | inexistente (sem troca de sinal) | n/d | 0 | decidir pelo VPL |
 | pessimista | B | sem_raiz | inexistente (sem troca de sinal) | n/d | 0 | decidir pelo VPL |
-| base | A | unica | 158,98% | 66,78% | 1 | supera a TMA |
-| base | B | unica | -12,14% | -4,88% | 1 | abaixo da TMA |
-| otimista | A | unica | 993,34% | 139,91% | 1 | supera a TMA |
-| otimista | B | unica | 110,81% | 50,78% | 1 | supera a TMA |
+| base | A | unica | 158,98% | 68,25% | 1 | supera a TMA |
+| base | B | unica | -12,14% | -4,04% | 1 | abaixo da TMA |
+| otimista | A | unica | 993,34% | 142,16% | 1 | supera a TMA |
+| otimista | B | unica | 110,81% | 52,20% | 1 | supera a TMA |
 
-TIR nominal equivalente (Fisher) no cenário base, Leitura A: 170,63%.
+TIR nominal equivalente (Fisher) no cenário base, Leitura A: 171,15%.
 
 ## IV. Payback
 
@@ -229,12 +229,12 @@ Interpolação linear dentro do ano: payback = k + |acumulado_k| / fluxo_(k+1), 
 
 | Cenário | Leitura | Payback simples | Payback descontado | Índice de lucratividade | ROI descontado |
 |---|---|---|---|---|---|
-| pessimista | A | não recupera no horizonte | não recupera no horizonte | -11,975 | -100,00% |
-| pessimista | B | não recupera no horizonte | não recupera no horizonte | -0,428 | -100,00% |
-| base | A | 0,90 anos (10,8 meses) | 1,00 anos (12,0 meses) | 7,843 | 684,33% |
-| base | B | não recupera no horizonte | não recupera no horizonte | 0,473 | -52,68% |
-| otimista | A | 0,10 anos (1,3 meses) | 0,12 anos (1,4 meses) | 48,306 | 4.730,61% |
-| otimista | B | 1,05 anos (12,6 meses) | 1,14 anos (13,6 meses) | 4,737 | 373,74% |
+| pessimista | A | não recupera no horizonte | não recupera no horizonte | -11,255 | -100,00% |
+| pessimista | B | não recupera no horizonte | não recupera no horizonte | -0,402 | -100,00% |
+| base | A | 0,90 anos (10,8 meses) | 1,01 anos (12,1 meses) | 7,321 | 632,14% |
+| base | B | não recupera no horizonte | não recupera no horizonte | 0,442 | -55,83% |
+| otimista | A | 0,10 anos (1,3 meses) | 0,12 anos (1,4 meses) | 45,215 | 4.421,52% |
+| otimista | B | 1,05 anos (12,6 meses) | 1,16 anos (13,9 meses) | 4,434 | 343,43% |
 
 O payback descontado é sempre maior ou igual ao simples, porque cada entrada futura vale menos hoje.
 
@@ -242,29 +242,29 @@ O payback descontado é sempre maior ou igual ao simples, porque cada entrada fu
 
 ### Tornado da Leitura A (±20%, uma variável por vez)
 
-VPL base: R$ 38.596,38
+VPL base: R$ 35.652,46
 
 | Variável | VPL com -20% | VPL com +20% | Amplitude |
 |---|---|---|---|
-| Benefícios / receitas | R$ 21.628,19 | R$ 55.564,58 | R$ 33.936,39 |
-| Custos operacionais (OpEx) | R$ 46.717,30 | R$ 30.475,46 | R$ 16.241,84 |
-| TMA | R$ 41.289,28 | R$ 36.129,73 | R$ 5.159,55 |
-| Investimento inicial | R$ 39.724,38 | R$ 37.468,38 | R$ 2.256,00 |
+| Benefícios / receitas | R$ 19.766,65 | R$ 51.538,26 | R$ 31.771,61 |
+| Custos operacionais (OpEx) | R$ 43.279,77 | R$ 28.025,15 | R$ 15.254,63 |
+| TMA | R$ 38.691,63 | R$ 32.918,21 | R$ 5.773,42 |
+| Investimento inicial | R$ 36.780,46 | R$ 34.524,46 | R$ 2.256,00 |
 
-Os benefícios podem cair até 45,49% antes de o VPL zerar (multiplicador de equilíbrio 0,5451).
+Os benefícios podem cair até 44,89% antes de o VPL zerar (multiplicador de equilíbrio 0,5511).
 
 ### Tornado da Leitura B (±20%, uma variável por vez)
 
-VPL base: -R$ 49.240,95
+VPL base: -R$ 52.184,88
 
 | Variável | VPL com -20% | VPL com +20% | Amplitude |
 |---|---|---|---|
-| Investimento inicial | -R$ 30.545,49 | -R$ 67.936,42 | R$ 37.390,93 |
-| Benefícios / receitas | -R$ 66.209,15 | -R$ 32.272,76 | R$ 33.936,39 |
-| Custos operacionais (OpEx) | -R$ 41.120,03 | -R$ 57.361,87 | R$ 16.241,84 |
-| TMA | -R$ 46.548,05 | -R$ 51.707,61 | R$ 5.159,55 |
+| Investimento inicial | -R$ 33.489,41 | -R$ 70.880,34 | R$ 37.390,93 |
+| Benefícios / receitas | -R$ 68.070,68 | -R$ 36.299,07 | R$ 31.771,61 |
+| Custos operacionais (OpEx) | -R$ 44.557,56 | -R$ 59.812,19 | R$ 15.254,63 |
+| TMA | -R$ 49.145,71 | -R$ 54.919,12 | R$ 5.773,42 |
 
-Os benefícios precisam subir 58,04% para o VPL zerar (multiplicador de equilíbrio 1,5804).
+Os benefícios precisam subir 65,70% para o VPL zerar (multiplicador de equilíbrio 1,6570).
 
 | Cenário | Investimento A | Investimento B | Benefício anual em regime | OpEx anual |
 |---|---|---|---|---|
@@ -272,7 +272,7 @@ Os benefícios precisam subir 58,04% para o VPL zerar (multiplicador de equilíb
 | base | R$ 5.640,00 | R$ 93.477,34 | R$ 24.420,00 | R$ 10.840,00 |
 | otimista | R$ 5.000,00 | R$ 50.983,49 | R$ 74.040,00 | R$ 4.192,00 |
 
-**Ponto de equilíbrio em horas economizadas:** mantidos os demais parâmetros do cenário base, o VPL da Leitura A zera com 1,43 h por usuário/mês e o da Leitura B com 7,28 h por usuário/mês (hipótese base: 4,0 h).
+**Ponto de equilíbrio em horas economizadas:** mantidos os demais parâmetros do cenário base, o VPL da Leitura A zera com 1,46 h por usuário/mês e o da Leitura B com 7,71 h por usuário/mês (hipótese base: 4,0 h).
 
 ## V. Métricas de eficiência ágil via GVA (EVM)
 
@@ -323,7 +323,7 @@ Leitura por período: Jul/2026: cada R$ 1,00 gasto entregou só R$ 0,78 de valor
 
 O repositório do sistema tem licença proprietária com uso acadêmico pelo SENAI FATESG; qualquer exploração comercial exige acordo prévio com a instituição. Multi-tenancy não foi implementado por decisão registrada; a opção SaaS exige esse investimento (CapEx).
 
-As opções externas são avaliadas à TMA real de negócio de 19,31% a.a. (TMA real + prêmio de risco de novo negócio), equivalente a 1,482% a.m. O uso interno usa a TMA institucional.
+As opções externas são avaliadas à TMA real de negócio de 22,03% a.a. (TMA real + prêmio de risco de novo negócio), equivalente a 1,673% a.m. O uso interno usa a TMA institucional.
 
 ### Precificação: markup sobre custo x valor percebido (opção SaaS)
 
@@ -348,8 +348,8 @@ SaaS multi-laboratório:
 | Vida média do cliente | 66,7 meses |
 | CAC | R$ 3.000,00 |
 | LTV simples | R$ 27.866,67 |
-| LTV descontado (i = 1,482% a.m.) | R$ 14.017,84 |
-| LTV/CAC | 4,67 |
+| LTV descontado (i = 1,673% a.m.) | R$ 13.174,13 |
+| LTV/CAC | 4,39 |
 | Payback do CAC | 7,2 meses |
 | Leitura | relação saudável (LTV/CAC >= 3) |
 
@@ -369,8 +369,8 @@ Implantação e suporte (contrato de suporte como recorrência):
 | Vida média do cliente | 100,0 meses |
 | CAC | R$ 3.000,00 |
 | LTV simples | R$ 24.300,00 |
-| LTV descontado (i = 1,482% a.m.) | R$ 9.790,83 |
-| LTV/CAC | 3,26 |
+| LTV descontado (i = 1,673% a.m.) | R$ 9.091,30 |
+| LTV/CAC | 3,03 |
 | Payback do CAC | 12,3 meses |
 | Leitura | relação saudável (LTV/CAC >= 3) |
 
@@ -402,15 +402,15 @@ CapEx inicial: R$ 5.400,00 (Empacotamento, manual de implantação (40 h) + acor
 
 | Opção | Taxa | VPL | TIR | Payback descontado | IL |
 |---|---|---|---|---|---|
-| Uso interno institucional | 10,47% | R$ 38.596,38 | 158,98% | 1,00 anos (12,0 meses) | 7,84 |
-| SaaS multi-laboratório | 19,31% | -R$ 22.808,68 | -9,68% | não recupera no horizonte | -0,31 |
-| Implantação e suporte (instância por laboratório) | 19,31% | R$ 3.190,30 | 29,54% | 4,39 anos (52,7 meses) | 1,59 |
+| Uso interno institucional | 12,99% | R$ 35.652,46 | 158,98% | 1,01 anos (12,1 meses) | 7,32 |
+| SaaS multi-laboratório | 22,03% | -R$ 23.437,93 | -9,68% | não recupera no horizonte | -0,35 |
+| Implantação e suporte (instância por laboratório) | 22,03% | R$ 2.191,44 | 29,54% | 4,53 anos (54,4 meses) | 1,41 |
 
 | Opção | VPL (peso 0,35) | risco (peso 0,25) | aderência às decisões técnicas (peso 0,20) | dependência de acordo de licença (peso 0,10) | esforço da equipe (peso 0,10) | Pontuação |
 |---|---|---|---|---|---|---|
 | Uso interno institucional | 10,0 | 8,0 | 10,0 | 10,0 | 8,0 | 9,30 |
 | SaaS multi-laboratório | 0,0 | 3,0 | 2,0 | 3,0 | 3,0 | 1,75 |
-| Implantação e suporte (instância por laboratório) | 4,2 | 6,0 | 9,0 | 4,0 | 6,0 | 5,78 |
+| Implantação e suporte (instância por laboratório) | 4,3 | 6,0 | 9,0 | 4,0 | 6,0 | 5,82 |
 
 Nota de VPL normalizada de 0 a 10 entre as opções; demais notas são julgamento do grupo. **Recomendação:** Uso interno institucional.
 
@@ -432,9 +432,9 @@ Custos de 5 anos (valores reais) de hospedar o sistema; benefícios iguais nas t
 
 | Alternativa | Vida | VPL | VPL anualizado (CAUE) | TIR | Custo de oportunidade |
 |---|---|---|---|---|---|
-| Nuvem com camada gratuita (plano do projeto) | 5 | -R$ 8.720,78 | -R$ 2.328,14 | não se aplica (fluxo só de custos) | R$ 0,00 |
-| VM paga pequena em nuvem | 5 | -R$ 13.215,76 | -R$ 3.528,14 | não se aplica (fluxo só de custos) | R$ 1.200,00 |
-| Servidor on-premises no laboratório | 4 | -R$ 22.122,83 | -R$ 7.050,08 | não se aplica (fluxo só de custos) | R$ 4.721,93 |
+| Nuvem com camada gratuita (plano do projeto) | 5 | -R$ 8.219,89 | -R$ 2.336,44 | não se aplica (fluxo só de custos) | R$ 0,00 |
+| VM paga pequena em nuvem | 5 | -R$ 12.441,65 | -R$ 3.536,44 | não se aplica (fluxo só de custos) | R$ 1.200,00 |
+| Servidor on-premises no laboratório | 4 | -R$ 21.647,35 | -R$ 7.276,13 | não se aplica (fluxo só de custos) | R$ 4.939,69 |
 
 Escolha econômica: **Nuvem com camada gratuita (plano do projeto)** (vidas diferentes: maior VPL anualizado (CAUE)).
 
@@ -458,8 +458,8 @@ Usar o sistema próprio já construído ou licenciar um sistema de gestão labor
 
 | Alternativa | Vida | VPL | VPL anualizado (CAUE) | TIR | Custo de oportunidade |
 |---|---|---|---|---|---|
-| Sistema próprio (implantar e manter) | 5 | -R$ 46.244,59 | -R$ 12.345,68 | não se aplica (fluxo só de custos) | R$ 0,00 |
-| LIMS de mercado (licenciar) | 5 | -R$ 67.179,68 | -R$ 17.934,62 | não se aplica (fluxo só de custos) | R$ 20.935,09 |
+| Sistema próprio (implantar e manter) | 5 | -R$ 43.776,56 | -R$ 12.443,12 | não se aplica (fluxo só de custos) | R$ 0,00 |
+| LIMS de mercado (licenciar) | 5 | -R$ 63.901,12 | -R$ 18.163,36 | não se aplica (fluxo só de custos) | R$ 20.124,55 |
 
 Escolha econômica: **Sistema próprio (implantar e manter)** (vidas iguais: maior VPL).
 
@@ -469,9 +469,9 @@ Escolha econômica: **Sistema próprio (implantar e manter)** (vidas iguais: mai
 
 | Alternativa | Vida | VPL | VPL anualizado (CAUE) | TIR | Custo de oportunidade |
 |---|---|---|---|---|---|
-| Manter como está | 5 | -R$ 2.247,49 | -R$ 600,00 | não se aplica (fluxo só de custos) | R$ 943,74 |
-| Refatorar: persistir no servidor | 5 | -R$ 1.440,00 | -R$ 384,43 | não se aplica (fluxo só de custos) | R$ 136,26 |
-| Aposentar: retirar a tela e controlar em planilha | 5 | -R$ 1.303,74 | -R$ 348,05 | não se aplica (fluxo só de custos) | R$ 0,00 |
+| Manter como está | 5 | -R$ 2.110,88 | -R$ 600,00 | não se aplica (fluxo só de custos) | R$ 875,44 |
+| Refatorar: persistir no servidor | 5 | -R$ 1.440,00 | -R$ 409,31 | não se aplica (fluxo só de custos) | R$ 204,56 |
+| Aposentar: retirar a tela e controlar em planilha | 5 | -R$ 1.235,44 | -R$ 351,16 | não se aplica (fluxo só de custos) | R$ 0,00 |
 
 Escolha econômica: **Aposentar: retirar a tela e controlar em planilha** (vidas iguais: maior VPL).
 
@@ -485,9 +485,9 @@ Escolha econômica: **Aposentar: retirar a tela e controlar em planilha** (vidas
 
 | Alternativa | Vida | VPL | VPL anualizado (CAUE) | TIR | Custo de oportunidade |
 |---|---|---|---|---|---|
-| Manter como está | 5 | -R$ 1.498,32 | -R$ 400,00 | não se aplica (fluxo só de custos) | R$ 629,16 |
-| Refatorar: concluir o fluxo de upload | 5 | -R$ 960,00 | -R$ 256,29 | não se aplica (fluxo só de custos) | R$ 90,84 |
-| Aposentar: ocultar o recurso e manter termo em papel | 5 | -R$ 869,16 | -R$ 232,04 | não se aplica (fluxo só de custos) | R$ 0,00 |
+| Manter como está | 5 | -R$ 1.407,25 | -R$ 400,00 | não se aplica (fluxo só de custos) | R$ 583,63 |
+| Refatorar: concluir o fluxo de upload | 5 | -R$ 960,00 | -R$ 272,87 | não se aplica (fluxo só de custos) | R$ 136,37 |
+| Aposentar: ocultar o recurso e manter termo em papel | 5 | -R$ 823,63 | -R$ 234,11 | não se aplica (fluxo só de custos) | R$ 0,00 |
 
 Escolha econômica: **Aposentar: ocultar o recurso e manter termo em papel** (vidas iguais: maior VPL).
 
@@ -499,21 +499,21 @@ Escolha econômica: **Aposentar: ocultar o recurso e manter termo em papel** (vi
 
 ## Priorização do backlog (Valor x Esforço) e princípio bom o suficiente
 
-Valor de 1 a 10 e horas estimadas pelo grupo; custo a R$ 60,00/h; VPL do item = valor anual x 3,7458 (fator de série a 10,47% em 5 anos) - custo. Capacidade do próximo ciclo: 80 h.
+Valor de 1 a 10 e horas estimadas pelo grupo; custo a R$ 60,00/h; VPL do item = valor anual x 3,5181 (fator de série a 12,99% em 5 anos) - custo. Capacidade do próximo ciclo: 80 h.
 
 | # | Id | Item | Valor | Horas | Valor/Esforço | Quadrante | WSJF | ICE | VPL do item | Decisão |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 1 | a | Aprimorar o gerenciamento de sessão de usuário | 8 | 2 | 4,000 | ganho rápido | 96,00 | 630 | R$ 5.498,72 | fazer neste ciclo |
-| 2 | f | Preservar a data de criação ao editar ordem de serviço | 7 | 2 | 3,500 | ganho rápido | 76,00 | 551 | R$ 4.374,97 | fazer neste ciclo |
-| 3 | d | Calcular a conformidade ambiental no servidor a partir das faixas de referência | 7 | 6 | 1,167 | ganho rápido | 26,67 | 379 | R$ 5.258,72 | fazer neste ciclo |
-| 4 | c | Concluir o registro de ligar e desligar máquina de ponta a ponta | 5 | 8 | 0,625 | preenchimento | 12,00 | 250 | R$ 2.216,98 | fazer neste ciclo |
-| 5 | l | Documentar a API com OpenAPI | 3 | 6 | 0,500 | preenchimento | 8,00 | 162 | R$ 763,74 | fazer neste ciclo |
-| 6 | e | Máquina de estados da ordem de serviço com validação de transições | 6 | 12 | 0,500 | ganho rápido | 10,67 | 232 | R$ 2.651,23 | fazer neste ciclo |
-| 7 | i | Provisionar VM, domínio e backup externo e colocar em produção | 10 | 24 | 0,417 | projeto estratégico | 9,33 | 384 | R$ 49.428,11 | fazer neste ciclo |
-| 8 | k | Testes de interface ponta a ponta dos 5 fluxos críticos | 5 | 16 | 0,312 | preenchimento | 7,50 | 175 | R$ 3.534,97 | fazer neste ciclo |
-| 9 | b | Persistir o cadastro de scanners 3D no servidor | 4 | 24 | 0,167 | evitar | 3,67 | 120 | R$ 807,49 | próximo ciclo (VPL positivo, sem capacidade agora) |
-| 10 | h | Geração de relatórios PDF no servidor | 4 | 40 | 0,100 | evitar | 1,80 | 80 | R$ 971,23 | próximo ciclo (VPL positivo, sem capacidade agora) |
-| 11 | g | Módulo de calibração com certificados e incerteza de medição | 8 | 120 | 0,067 | projeto estratégico | 1,33 | 55 | R$ 15.274,87 | próximo ciclo (VPL positivo, sem capacidade agora) |
+| 1 | a | Aprimorar o gerenciamento de sessão de usuário | 8 | 2 | 4,000 | ganho rápido | 96,00 | 630 | R$ 5.157,20 | fazer neste ciclo |
+| 2 | f | Preservar a data de criação ao editar ordem de serviço | 7 | 2 | 3,500 | ganho rápido | 76,00 | 551 | R$ 4.101,76 | fazer neste ciclo |
+| 3 | d | Calcular a conformidade ambiental no servidor a partir das faixas de referência | 7 | 6 | 1,167 | ganho rápido | 26,67 | 379 | R$ 4.917,20 | fazer neste ciclo |
+| 4 | c | Concluir o registro de ligar e desligar máquina de ponta a ponta | 5 | 8 | 0,625 | preenchimento | 12,00 | 250 | R$ 2.053,06 | fazer neste ciclo |
+| 5 | l | Documentar a API com OpenAPI | 3 | 6 | 0,500 | preenchimento | 8,00 | 162 | R$ 695,44 | fazer neste ciclo |
+| 6 | e | Máquina de estados da ordem de serviço com validação de transições | 6 | 12 | 0,500 | ganho rápido | 10,67 | 232 | R$ 2.446,32 | fazer neste ciclo |
+| 7 | i | Provisionar VM, domínio e backup externo e colocar em produção | 10 | 24 | 0,417 | projeto estratégico | 9,33 | 384 | R$ 46.336,25 | fazer neste ciclo |
+| 8 | k | Testes de interface ponta a ponta dos 5 fluxos críticos | 5 | 16 | 0,312 | preenchimento | 7,50 | 175 | R$ 3.261,76 | fazer neste ciclo |
+| 9 | b | Persistir o cadastro de scanners 3D no servidor | 4 | 24 | 0,167 | evitar | 3,67 | 120 | R$ 670,88 | próximo ciclo (VPL positivo, sem capacidade agora) |
+| 10 | h | Geração de relatórios PDF no servidor | 4 | 40 | 0,100 | evitar | 1,80 | 80 | R$ 766,32 | próximo ciclo (VPL positivo, sem capacidade agora) |
+| 11 | g | Módulo de calibração com certificados e incerteza de medição | 8 | 120 | 0,067 | projeto estratégico | 1,33 | 55 | R$ 13.908,80 | próximo ciclo (VPL positivo, sem capacidade agora) |
 | 12 | j | Multi-tenancy para oferta SaaS | 3 | 200 | 0,015 | evitar | 0,16 | 12 | -R$ 12.000,00 | não fazer (decisão registrada; reavaliar só se a opção SaaS for aprovada) |
 
 Horas comprometidas no ciclo: 76 de 80.

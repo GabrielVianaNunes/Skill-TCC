@@ -3,7 +3,10 @@
     "titulo": "Valoração econômica do ZEISS PILOT",
     "sistema": "ZEISS PILOT",
     "descricao": "Sistema web de gestão e rastreabilidade do Centro de Excelência em Metrologia (CEM) do SENAI Zeiss, em Goiânia (GO).",
-    "autores": ["Gabriel Viana Nunes", "João Vítor de Alencar Fraissat Mamede"],
+    "autores": [
+      "Gabriel Viana Nunes",
+      "João Vítor de Alencar Fraissat Mamede"
+    ],
     "curso": "Engenharia de Software, Faculdade SENAI Fatesg",
     "componente": "Engenharia Econômica",
     "docente": "Msc. Ujeverson Tavares Sampaio",
@@ -12,168 +15,509 @@
     "situacao": "Sistema funcionalmente completo, ainda não implantado em produção. Não existe medição de ganho em uso real."
   },
   "fatos_medidos": [
-    {"item": "Stack", "valor": "Java 21, Spring Boot 3.5, PostgreSQL 16, Thymeleaf e JavaScript sem framework, Docker e CI"},
-    {"item": "Entidades de domínio", "valor": "22"},
-    {"item": "Endpoints REST", "valor": "101"},
-    {"item": "Perfis de acesso", "valor": "4"},
-    {"item": "Métodos de teste automatizado", "valor": "340"},
-    {"item": "Idiomas da interface", "valor": "3 (português, inglês e alemão)"},
-    {"item": "Commits em main (25/05/2026 a 04/11/2026)", "valor": "222 (211 sem merge); Gabriel 174, João 48"},
-    {"item": "Commits por mês", "valor": "mai 1, jun 5, jul 53, ago 117, set 4, out 29, nov 13"},
-    {"item": "Dias distintos com commit (sem merge)", "valor": "25"},
-    {"item": "Linhas de código atuais (aprox.)", "valor": "Java 9,8 mil (produção) e 6,3 mil (teste); JavaScript 12,6 mil; CSS 9,2 mil; templates 8,4 mil; SQL 1,3 mil"},
-    {"item": "Base importada no primeiro commit (25/05/2026)", "valor": "36.722 linhas (JS 13.380, CSS 9.118, HTML 7.411, Java 6.804, outros 9)"},
-    {"item": "Registro formal de sprint", "valor": "Somente a Sprint 5: 6 issues (#13 a #18) fechadas em 20/10/2026, prazo do marco 05/11/2026"}
+    {
+      "item": "Stack",
+      "valor": "Java 21, Spring Boot 3.5, PostgreSQL 16, Thymeleaf e JavaScript sem framework, Docker e CI"
+    },
+    {
+      "item": "Entidades de domínio",
+      "valor": "22"
+    },
+    {
+      "item": "Endpoints REST",
+      "valor": "101"
+    },
+    {
+      "item": "Perfis de acesso",
+      "valor": "4"
+    },
+    {
+      "item": "Métodos de teste automatizado",
+      "valor": "340"
+    },
+    {
+      "item": "Idiomas da interface",
+      "valor": "3 (português, inglês e alemão)"
+    },
+    {
+      "item": "Commits em main (25/05/2026 a 04/11/2026)",
+      "valor": "222 (211 sem merge); Gabriel 174, João 48"
+    },
+    {
+      "item": "Commits por mês",
+      "valor": "mai 1, jun 5, jul 53, ago 117, set 4, out 29, nov 13"
+    },
+    {
+      "item": "Dias distintos com commit (sem merge)",
+      "valor": "25"
+    },
+    {
+      "item": "Linhas de código atuais (aprox.)",
+      "valor": "Java 9,8 mil (produção) e 6,3 mil (teste); JavaScript 12,6 mil; CSS 9,2 mil; templates 8,4 mil; SQL 1,3 mil"
+    },
+    {
+      "item": "Base importada no primeiro commit (25/05/2026)",
+      "valor": "36.722 linhas (JS 13.380, CSS 9.118, HTML 7.411, Java 6.804, outros 9)"
+    },
+    {
+      "item": "Registro formal de sprint",
+      "valor": "Somente a Sprint 5: 6 issues (#13 a #18) fechadas em 20/10/2026, prazo do marco 05/11/2026"
+    }
   ],
   "premissas": {
     "horizonte_anos": 5,
     "tma": {
-      "taxa_base": 0.11,
-      "rotulo_taxa_base": "taxa de referência livre de risco (hipótese do grupo; substituir pela taxa vigente informada pelo usuário)",
-      "premios": {"risco_do_projeto": 0.04},
-      "inflacao": 0.045,
-      "faixa_nominal": [0.12, 0.20]
+      "taxa_base": 0.1375,
+      "rotulo_taxa_base": "Selic meta em 13,75% a.a. (decisão do Copom de 04/11/2026); usada como taxa livre de risco de referência. Atualizar se a taxa mudar",
+      "premios": {
+        "risco_do_projeto": 0.04
+      },
+      "inflacao": 0.047,
+      "faixa_nominal": [
+        0.14,
+        0.22
+      ]
     },
     "premio_risco_negocio": 0.08,
     "tributos_uso_interno": 0.0
   },
   "parametros": {
-    "taxa_hora_dev": {"min": 48, "provavel": 60, "max": 84, "unidade": "R$/h",
+    "taxa_hora_dev": {
+      "min": 48,
+      "provavel": 60,
+      "max": 84,
+      "unidade": "R$/h",
       "descricao": "Custo da hora de desenvolvimento com encargos",
       "origem": "hipótese de mercado",
       "como_validar": "Pesquisa salarial de desenvolvedor júnior e pleno em Goiânia; conferir encargos com contador",
-      "derivacao": "salário mensal x (1 + 80% de encargos) / 150 h produtivas: R$ 4.000 (júnior) = 48; R$ 5.000 = 60; R$ 7.000 (pleno) = 84"},
-    "custo_hora_equipe": {"min": 35, "provavel": 45, "max": 60, "unidade": "R$/h",
+      "derivacao": "salário mensal x (1 + 80% de encargos) / 150 h produtivas: R$ 4.000 (júnior) = 48; R$ 5.000 = 60; R$ 7.000 (pleno) = 84"
+    },
+    "custo_hora_equipe": {
+      "min": 35,
+      "provavel": 45,
+      "max": 60,
+      "unidade": "R$/h",
       "descricao": "Custo médio da hora da equipe do laboratório (técnicos e estagiários) com encargos",
       "origem": "hipótese do grupo",
-      "como_validar": "Pedir ao CEM a folha média por cargo (dado agregado, sem nomes)"},
-    "usuarios": {"min": 5, "provavel": 8, "max": 12, "unidade": "usuários", "sentido_fixo": "beneficio",
+      "como_validar": "Pedir ao CEM a folha média por cargo (dado agregado, sem nomes)"
+    },
+    "usuarios": {
+      "min": 5,
+      "provavel": 8,
+      "max": 12,
+      "unidade": "usuários",
+      "sentido_fixo": "beneficio",
       "descricao": "Usuários internos ativos do sistema",
       "origem": "hipótese do grupo",
-      "como_validar": "Contar as contas ativas após 3 meses de produção"},
-    "horas_economizadas_usuario_mes": {"min": 2, "provavel": 4, "max": 6, "unidade": "h/usuário/mês",
+      "como_validar": "Contar as contas ativas após 3 meses de produção"
+    },
+    "horas_economizadas_usuario_mes": {
+      "min": 2,
+      "provavel": 4,
+      "max": 6,
+      "unidade": "h/usuário/mês",
       "descricao": "Horas de controle manual evitadas (OS, amostras, documentos, condições ambientais, almoxarifado, relatórios)",
       "origem": "hipótese do grupo",
-      "como_validar": "Cronometrar as rotinas antes e depois da implantação durante 1 mês"},
-    "horas_retrabalho_evitadas_mes": {"min": 3, "provavel": 6, "max": 10, "unidade": "h/mês",
+      "como_validar": "Cronometrar as rotinas antes e depois da implantação durante 1 mês"
+    },
+    "horas_retrabalho_evitadas_mes": {
+      "min": 3,
+      "provavel": 6,
+      "max": 10,
+      "unidade": "h/mês",
       "descricao": "Retrabalho evitado por dados validados e rastreáveis",
       "origem": "hipótese do grupo",
-      "como_validar": "Registrar ocorrências de correção de cadastro e relatório por 3 meses"},
-    "os_preservadas_ano": {"min": 0, "provavel": 2, "max": 4, "unidade": "OS/ano",
+      "como_validar": "Registrar ocorrências de correção de cadastro e relatório por 3 meses"
+    },
+    "os_preservadas_ano": {
+      "min": 0,
+      "provavel": 2,
+      "max": 4,
+      "unidade": "OS/ano",
       "descricao": "Ordens de serviço que deixariam de ser perdidas por melhor acompanhamento do pipeline comercial",
       "origem": "hipótese do grupo",
-      "como_validar": "Comparar a taxa de conversão do pipeline antes e depois (12 meses)"},
-    "ticket_medio_os": {"min": 1500, "provavel": 3000, "max": 5000, "unidade": "R$",
+      "como_validar": "Comparar a taxa de conversão do pipeline antes e depois (12 meses)"
+    },
+    "ticket_medio_os": {
+      "min": 1500,
+      "provavel": 3000,
+      "max": 5000,
+      "unidade": "R$",
       "descricao": "Ticket médio de uma OS de metrologia",
       "origem": "hipótese de mercado",
-      "como_validar": "Usar o ticket médio real dos relatórios do próprio sistema após a implantação"},
-    "margem_contribuicao_os": {"min": 0.3, "provavel": 0.4, "max": 0.5, "unidade": "fração",
+      "como_validar": "Usar o ticket médio real dos relatórios do próprio sistema após a implantação"
+    },
+    "margem_contribuicao_os": {
+      "min": 0.3,
+      "provavel": 0.4,
+      "max": 0.5,
+      "unidade": "fração",
       "descricao": "Margem de contribuição da receita preservada",
       "origem": "hipótese do grupo",
-      "como_validar": "Validar com a gestão financeira do CEM"},
-    "reducao_prob_nao_conformidade": {"min": 0.02, "provavel": 0.05, "max": 0.1, "unidade": "probabilidade/ano",
+      "como_validar": "Validar com a gestão financeira do CEM"
+    },
+    "reducao_prob_nao_conformidade": {
+      "min": 0.02,
+      "provavel": 0.05,
+      "max": 0.1,
+      "unidade": "probabilidade/ano",
       "descricao": "Redução anual da probabilidade de não conformidade relevante de rastreabilidade em auditoria ISO/IEC 17025",
       "origem": "hipótese do grupo",
-      "como_validar": "Histórico de constatações de auditoria do laboratório"},
-    "custo_nao_conformidade": {"min": 15000, "provavel": 30000, "max": 50000, "unidade": "R$",
+      "como_validar": "Histórico de constatações de auditoria do laboratório"
+    },
+    "custo_nao_conformidade": {
+      "min": 15000,
+      "provavel": 30000,
+      "max": 50000,
+      "unidade": "R$",
       "descricao": "Custo de uma não conformidade relevante (reauditoria, retrabalho e serviços suspensos)",
       "origem": "hipótese do grupo",
-      "como_validar": "Estimar com a qualidade do CEM"},
-    "horas_manutencao_mes": {"min": 6, "provavel": 12, "max": 20, "unidade": "h/mês",
+      "como_validar": "Estimar com a qualidade do CEM"
+    },
+    "horas_manutencao_mes": {
+      "min": 6,
+      "provavel": 12,
+      "max": 20,
+      "unidade": "h/mês",
       "descricao": "Manutenção corretiva, adaptativa e evolutiva",
       "origem": "estimado",
-      "como_validar": "Apontar horas de manutenção nos 6 primeiros meses de produção"},
-    "horas_admin_infra_mes": {"min": 1, "provavel": 2, "max": 4, "unidade": "h/mês",
+      "como_validar": "Apontar horas de manutenção nos 6 primeiros meses de produção"
+    },
+    "horas_admin_infra_mes": {
+      "min": 1,
+      "provavel": 2,
+      "max": 4,
+      "unidade": "h/mês",
       "descricao": "Administração da infraestrutura (atualizações, conferência de backup)",
       "origem": "estimado",
-      "como_validar": "Apontar horas de operação"},
-    "custo_infra_ano": {"min": 160, "provavel": 760, "max": 3400, "unidade": "R$/ano",
+      "como_validar": "Apontar horas de operação"
+    },
+    "custo_infra_ano": {
+      "min": 160,
+      "provavel": 760,
+      "max": 3400,
+      "unidade": "R$/ano",
       "descricao": "Infraestrutura em nuvem: domínio, armazenamento de backup e reserva para eventual migração da camada gratuita",
       "origem": "hipótese de mercado",
-      "como_validar": "Cotar no provedor na data da contratação; preços não são oficiais"}
+      "como_validar": "Cotar no provedor na data da contratação; preços não são oficiais"
+    }
   },
   "esforco": {
     "arquivo_log": "tcc-git-log.csv",
     "nota_metodo": "O commit de importação de 25/05/2026 (código anterior ao repositório) entra como base importada, não como trabalho do dia.",
-    "excluir_datas": ["2026-05-25"],
+    "excluir_datas": [
+      "2026-05-25"
+    ],
     "intervalo_sessao_horas": 3,
     "preparo_sessao_horas": 1,
-    "horas_por_dia_ativo": {"min": 4, "provavel": 6, "max": 8},
-    "fator_trabalho_sem_commit": {"min": 1.0, "provavel": 1.5, "max": 2.0},
+    "horas_por_dia_ativo": {
+      "min": 4,
+      "provavel": 6,
+      "max": 8
+    },
+    "fator_trabalho_sem_commit": {
+      "min": 1.0,
+      "provavel": 1.5,
+      "max": 2.0
+    },
     "base_importada": {
       "linhas": 36722,
-      "produtividade_linhas_hora": {"alta": 45, "provavel": 30, "baixa": 20},
+      "produtividade_linhas_hora": {
+        "alta": 45,
+        "provavel": 30,
+        "baixa": 20
+      },
       "como_validar": "Produtividade de 20 a 45 linhas/h; confrontar com o cronograma das Sprints 1 a 4",
       "nota": "Código desenvolvido antes do primeiro commit (Sprints 1 a 4, acompanhadas fora do repositório) e importado em 25/05/2026."
     }
   },
   "custos_indiretos_desenvolvimento": [
-    {"descricao": "Depreciação dos 2 notebooks de desenvolvimento (R$ 5.000 cada, 20% a.a., 10 meses, 50% de uso no projeto)", "valor": 1666.67, "rateio": 0.5},
-    {"descricao": "Internet e energia (R$ 100/mês por dev, 10 meses)", "valor": 2000, "rateio": 0.3},
-    {"descricao": "Ferramentas e licenças (IDE, repositório, CI em camadas gratuitas)", "valor": 0, "rateio": 1.0}
+    {
+      "descricao": "Depreciação dos 2 notebooks de desenvolvimento (R$ 5.000 cada, 20% a.a., 10 meses, 50% de uso no projeto)",
+      "valor": 1666.67,
+      "rateio": 0.5
+    },
+    {
+      "descricao": "Internet e energia (R$ 100/mês por dev, 10 meses)",
+      "valor": 2000,
+      "rateio": 0.3
+    },
+    {
+      "descricao": "Ferramentas e licenças (IDE, repositório, CI em camadas gratuitas)",
+      "valor": 0,
+      "rateio": 1.0
+    }
   ],
   "ativos_ti": [
-    {"nome": "Notebook de desenvolvimento (cada)", "custo": 5000, "taxa_anual": 0.2},
-    {"nome": "Servidor on-premises (alternativa de infraestrutura)", "custo": 12000, "taxa_anual": 0.2}
+    {
+      "nome": "Notebook de desenvolvimento (cada)",
+      "custo": 5000,
+      "taxa_anual": 0.2
+    },
+    {
+      "nome": "Servidor on-premises (alternativa de infraestrutura)",
+      "custo": 12000,
+      "taxa_anual": 0.2
+    }
   ],
   "implantacao": [
-    {"descricao": "Provisionar VM, domínio, TLS e backup externo; primeiro deploy", "horas": 24, "taxa": "taxa_hora_dev"},
-    {"descricao": "Ajustes de produto prioritários antes da produção (itens a e f do backlog)", "horas": 4, "taxa": "taxa_hora_dev"},
-    {"descricao": "Treinamento: preparação e condução pelos desenvolvedores", "horas": 12, "taxa": "taxa_hora_dev"},
-    {"descricao": "Treinamento: horas dos usuários (4 h por usuário)", "horas": "4*usuarios", "taxa": "custo_hora_equipe"},
-    {"descricao": "Carga inicial de cadastros pela equipe do laboratório", "horas": 40, "taxa": "custo_hora_equipe"}
+    {
+      "descricao": "Provisionar VM, domínio, TLS e backup externo; primeiro deploy",
+      "horas": 24,
+      "taxa": "taxa_hora_dev"
+    },
+    {
+      "descricao": "Ajustes de produto prioritários antes da produção (itens a e f do backlog)",
+      "horas": 4,
+      "taxa": "taxa_hora_dev"
+    },
+    {
+      "descricao": "Treinamento: preparação e condução pelos desenvolvedores",
+      "horas": 12,
+      "taxa": "taxa_hora_dev"
+    },
+    {
+      "descricao": "Treinamento: horas dos usuários (4 h por usuário)",
+      "horas": "4*usuarios",
+      "taxa": "custo_hora_equipe"
+    },
+    {
+      "descricao": "Carga inicial de cadastros pela equipe do laboratório",
+      "horas": 40,
+      "taxa": "custo_hora_equipe"
+    }
   ],
-  "rampa_adocao": [0.7, 1.0, 1.0, 1.0, 1.0],
+  "rampa_adocao": [
+    0.7,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
   "beneficios": [
-    {"nome": "Horas de controle manual economizadas", "fatores": ["usuarios", "horas_economizadas_usuario_mes", "custo_hora_equipe"], "multiplicador": 12},
-    {"nome": "Retrabalho evitado", "fatores": ["horas_retrabalho_evitadas_mes", "custo_hora_equipe"], "multiplicador": 12},
-    {"nome": "Margem de OS preservadas no pipeline comercial", "fatores": ["os_preservadas_ano", "ticket_medio_os", "margem_contribuicao_os"], "multiplicador": 1},
-    {"nome": "Risco de não conformidade 17025 evitado (valor esperado)", "fatores": ["reducao_prob_nao_conformidade", "custo_nao_conformidade"], "multiplicador": 1}
+    {
+      "nome": "Horas de controle manual economizadas",
+      "fatores": [
+        "usuarios",
+        "horas_economizadas_usuario_mes",
+        "custo_hora_equipe"
+      ],
+      "multiplicador": 12
+    },
+    {
+      "nome": "Retrabalho evitado",
+      "fatores": [
+        "horas_retrabalho_evitadas_mes",
+        "custo_hora_equipe"
+      ],
+      "multiplicador": 12
+    },
+    {
+      "nome": "Margem de OS preservadas no pipeline comercial",
+      "fatores": [
+        "os_preservadas_ano",
+        "ticket_medio_os",
+        "margem_contribuicao_os"
+      ],
+      "multiplicador": 1
+    },
+    {
+      "nome": "Risco de não conformidade 17025 evitado (valor esperado)",
+      "fatores": [
+        "reducao_prob_nao_conformidade",
+        "custo_nao_conformidade"
+      ],
+      "multiplicador": 1
+    }
   ],
   "opex": [
-    {"nome": "Manutenção corretiva e evolutiva", "fatores": ["horas_manutencao_mes", "taxa_hora_dev"], "multiplicador": 12},
-    {"nome": "Administração da infraestrutura", "fatores": ["horas_admin_infra_mes", "taxa_hora_dev"], "multiplicador": 12},
-    {"nome": "Infraestrutura em nuvem (domínio, backup, reserva)", "fatores": ["custo_infra_ano"], "multiplicador": 1}
+    {
+      "nome": "Manutenção corretiva e evolutiva",
+      "fatores": [
+        "horas_manutencao_mes",
+        "taxa_hora_dev"
+      ],
+      "multiplicador": 12
+    },
+    {
+      "nome": "Administração da infraestrutura",
+      "fatores": [
+        "horas_admin_infra_mes",
+        "taxa_hora_dev"
+      ],
+      "multiplicador": 12
+    },
+    {
+      "nome": "Infraestrutura em nuvem (domínio, backup, reserva)",
+      "fatores": [
+        "custo_infra_ano"
+      ],
+      "multiplicador": 1
+    }
   ],
   "gva": {
     "bac_horas": 200,
     "nota_registro": "Só a Sprint 5 tem registro formal no repositório (issues #13 a #18); os meses de jul a out/2026 são tratados como 4 períodos planejados.",
     "bac_nota": "Plano de referência reconstruído: 2 desenvolvedores x cerca de 6 h/semana x 17 semanas (jul a out/2026), arredondado para 200 h.",
     "sprints_planejadas": 4,
-    "meses": ["2026-07", "2026-08", "2026-09", "2026-10", "2026-11"],
-    "rotulos": {"2026-07": "Jul/2026", "2026-08": "Ago/2026", "2026-09": "Set/2026", "2026-10": "Out/2026 (inclui Sprint 5)", "2026-11": "Nov/2026 (até 04/11)"},
+    "meses": [
+      "2026-07",
+      "2026-08",
+      "2026-09",
+      "2026-10",
+      "2026-11"
+    ],
+    "rotulos": {
+      "2026-07": "Jul/2026",
+      "2026-08": "Ago/2026",
+      "2026-09": "Set/2026",
+      "2026-10": "Out/2026 (inclui Sprint 5)",
+      "2026-11": "Nov/2026 (até 04/11)"
+    },
     "pacotes": [
-      {"id": "P1", "nome": "Infraestrutura de base: versionamento de esquema, suíte de testes, backup, Docker e CI", "pontos": 13, "mes_concluido": "2026-07"},
-      {"id": "P2", "nome": "Papéis de acesso e endurecimento inicial", "pontos": 5, "mes_concluido": "2026-07"},
-      {"id": "P3", "nome": "Internacionalização completa e tema acessível (WCAG AA)", "pontos": 8, "mes_concluido": "2026-08"},
-      {"id": "P4", "nome": "Conformidade com padrões institucionais, criptografia de dados pessoais e auditoria", "pontos": 8, "mes_concluido": "2026-08"},
-      {"id": "P5", "nome": "Módulo de clientes, catálogo de serviços e notificações", "pontos": 8, "mes_concluido": "2026-08"},
-      {"id": "P6", "nome": "Normalização e validação de todos os campos (6 fases)", "pontos": 13, "mes_concluido": "2026-08"},
-      {"id": "P7", "nome": "Dashboard de receita por cliente e vínculo de campos", "pontos": 5, "mes_concluido": "2026-08"},
-      {"id": "P8", "nome": "Estabilização do CI e documentação", "pontos": 2, "mes_concluido": "2026-09"},
-      {"id": "P9", "nome": "Melhorias de eventos, indicadores, dados de demonstração e hierarquia de acesso", "pontos": 5, "mes_concluido": "2026-10"},
-      {"id": "P10", "nome": "Sprint 5 (issues #13 a #18)", "pontos": 3, "mes_concluido": "2026-10"},
-      {"id": "P11", "nome": "Refinamento de interface e acessibilidade", "pontos": 3, "mes_concluido": "2026-11"},
-      {"id": "P12", "nome": "Implantação em produção (VM, domínio, backup externo, treinamento)", "pontos": 8, "mes_concluido": null},
-      {"id": "P13", "nome": "Conclusão de fluxos pendentes (registro de máquina, anexo de termo de amostra)", "pontos": 5, "mes_concluido": null}
+      {
+        "id": "P1",
+        "nome": "Infraestrutura de base: versionamento de esquema, suíte de testes, backup, Docker e CI",
+        "pontos": 13,
+        "mes_concluido": "2026-07"
+      },
+      {
+        "id": "P2",
+        "nome": "Papéis de acesso e endurecimento inicial",
+        "pontos": 5,
+        "mes_concluido": "2026-07"
+      },
+      {
+        "id": "P3",
+        "nome": "Internacionalização completa e tema acessível (WCAG AA)",
+        "pontos": 8,
+        "mes_concluido": "2026-08"
+      },
+      {
+        "id": "P4",
+        "nome": "Conformidade com padrões institucionais, criptografia de dados pessoais e auditoria",
+        "pontos": 8,
+        "mes_concluido": "2026-08"
+      },
+      {
+        "id": "P5",
+        "nome": "Módulo de clientes, catálogo de serviços e notificações",
+        "pontos": 8,
+        "mes_concluido": "2026-08"
+      },
+      {
+        "id": "P6",
+        "nome": "Normalização e validação de todos os campos (6 fases)",
+        "pontos": 13,
+        "mes_concluido": "2026-08"
+      },
+      {
+        "id": "P7",
+        "nome": "Dashboard de receita por cliente e vínculo de campos",
+        "pontos": 5,
+        "mes_concluido": "2026-08"
+      },
+      {
+        "id": "P8",
+        "nome": "Estabilização do CI e documentação",
+        "pontos": 2,
+        "mes_concluido": "2026-09"
+      },
+      {
+        "id": "P9",
+        "nome": "Melhorias de eventos, indicadores, dados de demonstração e hierarquia de acesso",
+        "pontos": 5,
+        "mes_concluido": "2026-10"
+      },
+      {
+        "id": "P10",
+        "nome": "Sprint 5 (issues #13 a #18)",
+        "pontos": 3,
+        "mes_concluido": "2026-10"
+      },
+      {
+        "id": "P11",
+        "nome": "Refinamento de interface e acessibilidade",
+        "pontos": 3,
+        "mes_concluido": "2026-11"
+      },
+      {
+        "id": "P12",
+        "nome": "Implantação em produção (VM, domínio, backup externo, treinamento)",
+        "pontos": 8,
+        "mes_concluido": null
+      },
+      {
+        "id": "P13",
+        "nome": "Conclusão de fluxos pendentes (registro de máquina, anexo de termo de amostra)",
+        "pontos": 5,
+        "mes_concluido": null
+      }
     ],
     "duracao_planejada_meses": 4
   },
   "alternativas_infra": {
     "descricao": "Custos de 5 anos (valores reais) de hospedar o sistema; benefícios iguais nas três opções.",
     "opcoes": [
-      {"nome": "Nuvem com camada gratuita (plano do projeto)", "investimento": 480, "anual": 2200, "vida": 5,
-       "nota": "VM sem custo sujeita aos termos do provedor; 8 h de configuração; domínio, backup, reserva de migração e 2 h/mês de administração"},
-      {"nome": "VM paga pequena em nuvem", "investimento": 480, "anual": 3400, "vida": 5,
-       "nota": "VM de 2 vCPU e 4 GB por cerca de R$ 150/mês (hipótese), domínio, backup e 2 h/mês de administração"},
-      {"nome": "Servidor on-premises no laboratório", "investimento": 12960, "anual": 2920, "vida": 4,
-       "nota": "Servidor de R$ 12.000 (vida econômica de 4 anos; a vida fiscal é de 5 anos, 20% a.a.), 16 h de configuração, energia e rateio, 3 h/mês de administração"}
+      {
+        "nome": "Nuvem com camada gratuita (plano do projeto)",
+        "investimento": 480,
+        "anual": 2200,
+        "vida": 5,
+        "nota": "VM sem custo sujeita aos termos do provedor; 8 h de configuração; domínio, backup, reserva de migração e 2 h/mês de administração"
+      },
+      {
+        "nome": "VM paga pequena em nuvem",
+        "investimento": 480,
+        "anual": 3400,
+        "vida": 5,
+        "nota": "VM de 2 vCPU e 4 GB por cerca de R$ 150/mês (hipótese), domínio, backup e 2 h/mês de administração"
+      },
+      {
+        "nome": "Servidor on-premises no laboratório",
+        "investimento": 12960,
+        "anual": 2920,
+        "vida": 4,
+        "nota": "Servidor de R$ 12.000 (vida econômica de 4 anos; a vida fiscal é de 5 anos, 20% a.a.), 16 h de configuração, energia e rateio, 3 h/mês de administração"
+      }
     ],
-    "criterios": [{"nome": "custo", "peso": 0.4}, {"nome": "risco operacional", "peso": 0.3}, {"nome": "aderência institucional", "peso": 0.2}, {"nome": "esforço de operação", "peso": 0.1}],
+    "criterios": [
+      {
+        "nome": "custo",
+        "peso": 0.4
+      },
+      {
+        "nome": "risco operacional",
+        "peso": 0.3
+      },
+      {
+        "nome": "aderência institucional",
+        "peso": 0.2
+      },
+      {
+        "nome": "esforço de operação",
+        "peso": 0.1
+      }
+    ],
     "notas": {
-      "Nuvem com camada gratuita (plano do projeto)": {"custo": 9, "risco operacional": 5, "aderência institucional": 5, "esforço de operação": 7},
-      "VM paga pequena em nuvem": {"custo": 7, "risco operacional": 7, "aderência institucional": 6, "esforço de operação": 7},
-      "Servidor on-premises no laboratório": {"custo": 4, "risco operacional": 6, "aderência institucional": 8, "esforço de operação": 4}
+      "Nuvem com camada gratuita (plano do projeto)": {
+        "custo": 9,
+        "risco operacional": 5,
+        "aderência institucional": 5,
+        "esforço de operação": 7
+      },
+      "VM paga pequena em nuvem": {
+        "custo": 7,
+        "risco operacional": 7,
+        "aderência institucional": 6,
+        "esforço de operação": 7
+      },
+      "Servidor on-premises no laboratório": {
+        "custo": 4,
+        "risco operacional": 6,
+        "aderência institucional": 8,
+        "esforço de operação": 4
+      }
     }
   },
   "construir_vs_comprar": {
@@ -186,17 +530,47 @@
     {
       "componente": "Cadastro de scanners 3D (dados mantidos apenas no navegador)",
       "opcoes": [
-        {"nome": "Manter como está", "investimento": 0, "anual": -600, "nota": "valor esperado de perda ou divergência de registros (hipótese)"},
-        {"nome": "Refatorar: persistir no servidor", "investimento": 1440, "anual": 0, "nota": "24 h de desenvolvimento; elimina a perda"},
-        {"nome": "Aposentar: retirar a tela e controlar em planilha", "investimento": 180, "anual": -300, "nota": "3 h para retirar; controle manual estimado"}
+        {
+          "nome": "Manter como está",
+          "investimento": 0,
+          "anual": -600,
+          "nota": "valor esperado de perda ou divergência de registros (hipótese)"
+        },
+        {
+          "nome": "Refatorar: persistir no servidor",
+          "investimento": 1440,
+          "anual": 0,
+          "nota": "24 h de desenvolvimento; elimina a perda"
+        },
+        {
+          "nome": "Aposentar: retirar a tela e controlar em planilha",
+          "investimento": 180,
+          "anual": -300,
+          "nota": "3 h para retirar; controle manual estimado"
+        }
       ]
     },
     {
       "componente": "Anexo de termo de recebimento de amostra (fluxo incompleto)",
       "opcoes": [
-        {"nome": "Manter como está", "investimento": 0, "anual": -400, "nota": "confusão de uso e arquivamento paralelo (hipótese)"},
-        {"nome": "Refatorar: concluir o fluxo de upload", "investimento": 960, "anual": 0, "nota": "16 h, reaproveitando o padrão de documentos de máquina"},
-        {"nome": "Aposentar: ocultar o recurso e manter termo em papel", "investimento": 120, "anual": -200, "nota": "2 h; arquivamento manual"}
+        {
+          "nome": "Manter como está",
+          "investimento": 0,
+          "anual": -400,
+          "nota": "confusão de uso e arquivamento paralelo (hipótese)"
+        },
+        {
+          "nome": "Refatorar: concluir o fluxo de upload",
+          "investimento": 960,
+          "anual": 0,
+          "nota": "16 h, reaproveitando o padrão de documentos de máquina"
+        },
+        {
+          "nome": "Aposentar: ocultar o recurso e manter termo em papel",
+          "investimento": 120,
+          "anual": -200,
+          "nota": "2 h; arquivamento manual"
+        }
       ]
     }
   ],
@@ -205,56 +579,198 @@
     "limiar_valor": 6,
     "limiar_horas": 16,
     "itens": [
-      {"id": "a", "titulo": "Aprimorar o gerenciamento de sessão de usuário", "valor": 8, "esforco_horas": 2, "criticidade_tempo": 8, "reducao_risco": 8, "confianca": 9, "valor_anual": 1500,
-       "justificativa": "Boa prática de produto para computadores compartilhados do laboratório; mudança pequena no frontend"},
-      {"id": "b", "titulo": "Persistir o cadastro de scanners 3D no servidor", "valor": 4, "esforco_horas": 24, "criticidade_tempo": 3, "reducao_risco": 4, "confianca": 7, "valor_anual": 600,
-       "justificativa": "Hoje o cadastro fica no navegador; exige entidade, migração, API e ajuste de tela"},
-      {"id": "c", "titulo": "Concluir o registro de ligar e desligar máquina de ponta a ponta", "valor": 5, "esforco_horas": 8, "criticidade_tempo": 4, "reducao_risco": 3, "confianca": 8, "valor_anual": 720,
-       "justificativa": "Uso de máquina alimenta indicadores; requer grupos de validação distintos para criar e atualizar"},
-      {"id": "d", "titulo": "Calcular a conformidade ambiental no servidor a partir das faixas de referência", "valor": 7, "esforco_horas": 6, "criticidade_tempo": 6, "reducao_risco": 7, "confianca": 8, "valor_anual": 1500,
-       "justificativa": "Comparação automática com 20 ± 2 °C e 45 a 65% de umidade apoia a ISO/IEC 17025"},
-      {"id": "e", "titulo": "Máquina de estados da ordem de serviço com validação de transições", "valor": 6, "esforco_horas": 12, "criticidade_tempo": 5, "reducao_risco": 5, "confianca": 7, "valor_anual": 900,
-       "justificativa": "Status hoje é texto validado no banco; transições explícitas melhoram qualidade de dados e mensagens"},
-      {"id": "f", "titulo": "Preservar a data de criação ao editar ordem de serviço", "valor": 7, "esforco_horas": 2, "criticidade_tempo": 7, "reducao_risco": 5, "confianca": 9, "valor_anual": 1200,
-       "justificativa": "Mantém a receita no mês correto dos relatórios"},
-      {"id": "g", "titulo": "Módulo de calibração com certificados e incerteza de medição", "valor": 8, "esforco_horas": 120, "criticidade_tempo": 5, "reducao_risco": 7, "confianca": 5, "valor_anual": 6000,
-       "justificativa": "Maior lacuna funcional para a 17025; escopo grande e incerto"},
-      {"id": "h", "titulo": "Geração de relatórios PDF no servidor", "valor": 4, "esforco_horas": 40, "criticidade_tempo": 3, "reducao_risco": 2, "confianca": 6, "valor_anual": 900,
-       "justificativa": "Hoje a impressão é feita pelo navegador; ganho de padronização"},
-      {"id": "i", "titulo": "Provisionar VM, domínio e backup externo e colocar em produção", "valor": 10, "esforco_horas": 24, "criticidade_tempo": 10, "reducao_risco": 8, "confianca": 9, "valor_anual": "$beneficio_liquido_ano2",
-       "justificativa": "Pré-requisito de todos os benefícios (as mesmas 24 h já estão no investimento de implantação); valor anual igual ao benefício líquido anual em regime (ano 2) do cenário base, calculado pelo modelo"},
-      {"id": "j", "titulo": "Multi-tenancy para oferta SaaS", "valor": 3, "esforco_horas": 200, "criticidade_tempo": 1, "reducao_risco": 0, "confianca": 4, "valor_anual": 0,
-       "justificativa": "Decisão registrada de não implementar; só faz sentido se a opção SaaS for escolhida", "decisao_fixa": "não fazer (decisão registrada; reavaliar só se a opção SaaS for aprovada)"},
-      {"id": "k", "titulo": "Testes de interface ponta a ponta dos 5 fluxos críticos", "valor": 5, "esforco_horas": 16, "criticidade_tempo": 4, "reducao_risco": 6, "confianca": 7, "valor_anual": 1200,
-       "justificativa": "Protege a evolução contra regressões; escopo limitado pelo princípio bom o suficiente (ver análise abaixo)"},
-      {"id": "l", "titulo": "Documentar a API com OpenAPI", "valor": 3, "esforco_horas": 6, "criticidade_tempo": 2, "reducao_risco": 1, "confianca": 8, "valor_anual": 300,
-       "justificativa": "Facilita integração e manutenção por outra equipe de TI"}
+      {
+        "id": "a",
+        "titulo": "Aprimorar o gerenciamento de sessão de usuário",
+        "valor": 8,
+        "esforco_horas": 2,
+        "criticidade_tempo": 8,
+        "reducao_risco": 8,
+        "confianca": 9,
+        "valor_anual": 1500,
+        "justificativa": "Boa prática de produto para computadores compartilhados do laboratório; mudança pequena no frontend"
+      },
+      {
+        "id": "b",
+        "titulo": "Persistir o cadastro de scanners 3D no servidor",
+        "valor": 4,
+        "esforco_horas": 24,
+        "criticidade_tempo": 3,
+        "reducao_risco": 4,
+        "confianca": 7,
+        "valor_anual": 600,
+        "justificativa": "Hoje o cadastro fica no navegador; exige entidade, migração, API e ajuste de tela"
+      },
+      {
+        "id": "c",
+        "titulo": "Concluir o registro de ligar e desligar máquina de ponta a ponta",
+        "valor": 5,
+        "esforco_horas": 8,
+        "criticidade_tempo": 4,
+        "reducao_risco": 3,
+        "confianca": 8,
+        "valor_anual": 720,
+        "justificativa": "Uso de máquina alimenta indicadores; requer grupos de validação distintos para criar e atualizar"
+      },
+      {
+        "id": "d",
+        "titulo": "Calcular a conformidade ambiental no servidor a partir das faixas de referência",
+        "valor": 7,
+        "esforco_horas": 6,
+        "criticidade_tempo": 6,
+        "reducao_risco": 7,
+        "confianca": 8,
+        "valor_anual": 1500,
+        "justificativa": "Comparação automática com 20 ± 2 °C e 45 a 65% de umidade apoia a ISO/IEC 17025"
+      },
+      {
+        "id": "e",
+        "titulo": "Máquina de estados da ordem de serviço com validação de transições",
+        "valor": 6,
+        "esforco_horas": 12,
+        "criticidade_tempo": 5,
+        "reducao_risco": 5,
+        "confianca": 7,
+        "valor_anual": 900,
+        "justificativa": "Status hoje é texto validado no banco; transições explícitas melhoram qualidade de dados e mensagens"
+      },
+      {
+        "id": "f",
+        "titulo": "Preservar a data de criação ao editar ordem de serviço",
+        "valor": 7,
+        "esforco_horas": 2,
+        "criticidade_tempo": 7,
+        "reducao_risco": 5,
+        "confianca": 9,
+        "valor_anual": 1200,
+        "justificativa": "Mantém a receita no mês correto dos relatórios"
+      },
+      {
+        "id": "g",
+        "titulo": "Módulo de calibração com certificados e incerteza de medição",
+        "valor": 8,
+        "esforco_horas": 120,
+        "criticidade_tempo": 5,
+        "reducao_risco": 7,
+        "confianca": 5,
+        "valor_anual": 6000,
+        "justificativa": "Maior lacuna funcional para a 17025; escopo grande e incerto"
+      },
+      {
+        "id": "h",
+        "titulo": "Geração de relatórios PDF no servidor",
+        "valor": 4,
+        "esforco_horas": 40,
+        "criticidade_tempo": 3,
+        "reducao_risco": 2,
+        "confianca": 6,
+        "valor_anual": 900,
+        "justificativa": "Hoje a impressão é feita pelo navegador; ganho de padronização"
+      },
+      {
+        "id": "i",
+        "titulo": "Provisionar VM, domínio e backup externo e colocar em produção",
+        "valor": 10,
+        "esforco_horas": 24,
+        "criticidade_tempo": 10,
+        "reducao_risco": 8,
+        "confianca": 9,
+        "valor_anual": "$beneficio_liquido_ano2",
+        "justificativa": "Pré-requisito de todos os benefícios (as mesmas 24 h já estão no investimento de implantação); valor anual igual ao benefício líquido anual em regime (ano 2) do cenário base, calculado pelo modelo"
+      },
+      {
+        "id": "j",
+        "titulo": "Multi-tenancy para oferta SaaS",
+        "valor": 3,
+        "esforco_horas": 200,
+        "criticidade_tempo": 1,
+        "reducao_risco": 0,
+        "confianca": 4,
+        "valor_anual": 0,
+        "justificativa": "Decisão registrada de não implementar; só faz sentido se a opção SaaS for escolhida",
+        "decisao_fixa": "não fazer (decisão registrada; reavaliar só se a opção SaaS for aprovada)"
+      },
+      {
+        "id": "k",
+        "titulo": "Testes de interface ponta a ponta dos 5 fluxos críticos",
+        "valor": 5,
+        "esforco_horas": 16,
+        "criticidade_tempo": 4,
+        "reducao_risco": 6,
+        "confianca": 7,
+        "valor_anual": 1200,
+        "justificativa": "Protege a evolução contra regressões; escopo limitado pelo princípio bom o suficiente (ver análise abaixo)"
+      },
+      {
+        "id": "l",
+        "titulo": "Documentar a API com OpenAPI",
+        "valor": 3,
+        "esforco_horas": 6,
+        "criticidade_tempo": 2,
+        "reducao_risco": 1,
+        "confianca": 8,
+        "valor_anual": 300,
+        "justificativa": "Facilita integração e manutenção por outra equipe de TI"
+      }
     ],
     "niveis_qualidade_testes_interface": [
-      {"nome": "Sem testes de interface (só testes de API e serviço atuais)", "custo": 0, "beneficio": 0},
-      {"nome": "5 fluxos críticos (login, OS, amostra, documento, relatório)", "custo": 960, "beneficio": 3000},
-      {"nome": "Todas as 22 telas", "custo": 2400, "beneficio": 3800},
-      {"nome": "Todas as telas + regressão visual nos 2 temas e 3 idiomas", "custo": 4800, "beneficio": 4300}
+      {
+        "nome": "Sem testes de interface (só testes de API e serviço atuais)",
+        "custo": 0,
+        "beneficio": 0
+      },
+      {
+        "nome": "5 fluxos críticos (login, OS, amostra, documento, relatório)",
+        "custo": 960,
+        "beneficio": 3000
+      },
+      {
+        "nome": "Todas as 22 telas",
+        "custo": 2400,
+        "beneficio": 3800
+      },
+      {
+        "nome": "Todas as telas + regressão visual nos 2 temas e 3 idiomas",
+        "custo": 4800,
+        "beneficio": 4300
+      }
     ]
   },
   "modelo_negocio": {
     "nota_licenca": "O repositório do sistema tem licença proprietária com uso acadêmico pelo SENAI FATESG; qualquer exploração comercial exige acordo prévio com a instituição.",
     "nota_multitenancy": "Multi-tenancy não foi implementado por decisão registrada; a opção SaaS exige esse investimento (CapEx).",
     "tributos_simples_aliquota_efetiva": 0.06,
-    "presumido": {"presuncao": 0.32, "irpj": 0.15, "csll": 0.09, "tributos_faturamento": 0.0565},
+    "presumido": {
+      "presuncao": 0.32,
+      "irpj": 0.15,
+      "csll": 0.09,
+      "tributos_faturamento": 0.0565
+    },
     "aliquota_ir_csll_lucro_real": 0.34,
     "saas": {
       "capex_horas": 240,
       "capex_outros": 3000,
       "capex_descricao": "Multi-tenancy (200 h) e adaptação para cobrança e isolamento (40 h) + acordo de licença com a instituição (R$ 3.000)",
-      "custo_variavel_mensal_cliente": {"infra": 60, "horas_suporte": 3},
-      "custos_fixos_anuais": {"infra": 3400, "horas_manutencao_mes": 12},
-      "margem_desejada": 0.30,
+      "custo_variavel_mensal_cliente": {
+        "infra": 60,
+        "horas_suporte": 3
+      },
+      "custos_fixos_anuais": {
+        "infra": 3400,
+        "horas_manutencao_mes": 12
+      },
+      "margem_desejada": 0.3,
       "captura_valor": 0.35,
       "preco_mensal": 700,
       "cac": 3000,
       "churn_mensal": 0.015,
-      "novos_por_ano": [1, 2, 3, 3, 3]
+      "novos_por_ano": [
+        1,
+        2,
+        3,
+        3,
+        3
+      ]
     },
     "implantacao_suporte": {
       "capex_horas": 40,
@@ -264,24 +780,104 @@
       "horas_implantacao": 60,
       "mensalidade_suporte": 450,
       "horas_suporte_mes_cliente": 3,
-      "custos_fixos_anuais": {"horas_manutencao_mes": 8},
+      "custos_fixos_anuais": {
+        "horas_manutencao_mes": 8
+      },
       "cac": 3000,
       "churn_mensal": 0.01,
-      "novos_por_ano": [1, 1, 2, 2, 2]
+      "novos_por_ano": [
+        1,
+        1,
+        2,
+        2,
+        2
+      ]
     },
-    "criterios": [{"nome": "VPL", "peso": 0.35}, {"nome": "risco", "peso": 0.25}, {"nome": "aderência às decisões técnicas", "peso": 0.2}, {"nome": "dependência de acordo de licença", "peso": 0.1}, {"nome": "esforço da equipe", "peso": 0.1}],
+    "criterios": [
+      {
+        "nome": "VPL",
+        "peso": 0.35
+      },
+      {
+        "nome": "risco",
+        "peso": 0.25
+      },
+      {
+        "nome": "aderência às decisões técnicas",
+        "peso": 0.2
+      },
+      {
+        "nome": "dependência de acordo de licença",
+        "peso": 0.1
+      },
+      {
+        "nome": "esforço da equipe",
+        "peso": 0.1
+      }
+    ],
     "notas": {
-      "Uso interno institucional": {"risco": 8, "aderência às decisões técnicas": 10, "dependência de acordo de licença": 10, "esforço da equipe": 8},
-      "SaaS multi-laboratório": {"risco": 3, "aderência às decisões técnicas": 2, "dependência de acordo de licença": 3, "esforço da equipe": 3},
-      "Implantação e suporte (instância por laboratório)": {"risco": 6, "aderência às decisões técnicas": 9, "dependência de acordo de licença": 4, "esforço da equipe": 6}
+      "Uso interno institucional": {
+        "risco": 8,
+        "aderência às decisões técnicas": 10,
+        "dependência de acordo de licença": 10,
+        "esforço da equipe": 8
+      },
+      "SaaS multi-laboratório": {
+        "risco": 3,
+        "aderência às decisões técnicas": 2,
+        "dependência de acordo de licença": 3,
+        "esforço da equipe": 3
+      },
+      "Implantação e suporte (instância por laboratório)": {
+        "risco": 6,
+        "aderência às decisões técnicas": 9,
+        "dependência de acordo de licença": 4,
+        "esforço da equipe": 6
+      }
     }
   },
   "riscos": [
-    {"risco": "Benefícios menores que o previsto (adoção baixa)", "probabilidade": "média", "impacto": "alto", "variavel": "usuarios, horas_economizadas_usuario_mes", "mitigacao": "Treinamento, medição de uso no 1º trimestre e revisão do modelo"},
-    {"risco": "Camada gratuita de nuvem descontinuada ou recuperada pelo provedor", "probabilidade": "média", "impacto": "médio", "variavel": "custo_infra_ano", "mitigacao": "Reserva de migração, backup externo diário cifrado e deploy em contêiner reproduzível"},
-    {"risco": "Exigências de padrão institucional de TI (banco de dados e arquitetura) que obriguem reescrita", "probabilidade": "média", "impacto": "alto", "variavel": "investimento, horas_manutencao_mes", "mitigacao": "Negociar escopo de aderência antes da produção; manter o sistema portável"},
-    {"risco": "Manutenção acima do estimado ao transferir a operação para outra equipe", "probabilidade": "média", "impacto": "médio", "variavel": "horas_manutencao_mes", "mitigacao": "Documentação de API, testes automatizados e runbook"},
-    {"risco": "Taxa horária de mercado diferente da hipótese", "probabilidade": "alta", "impacto": "médio", "variavel": "taxa_hora_dev", "mitigacao": "Sensibilidade de ±20% e cenários; validar com pesquisa salarial"},
-    {"risco": "Exploração comercial sem acordo de propriedade intelectual", "probabilidade": "baixa", "impacto": "alto", "variavel": "modelo de negócio", "mitigacao": "Formalizar acordo com a instituição antes de qualquer oferta externa"}
+    {
+      "risco": "Benefícios menores que o previsto (adoção baixa)",
+      "probabilidade": "média",
+      "impacto": "alto",
+      "variavel": "usuarios, horas_economizadas_usuario_mes",
+      "mitigacao": "Treinamento, medição de uso no 1º trimestre e revisão do modelo"
+    },
+    {
+      "risco": "Camada gratuita de nuvem descontinuada ou recuperada pelo provedor",
+      "probabilidade": "média",
+      "impacto": "médio",
+      "variavel": "custo_infra_ano",
+      "mitigacao": "Reserva de migração, backup externo diário cifrado e deploy em contêiner reproduzível"
+    },
+    {
+      "risco": "Exigências de padrão institucional de TI (banco de dados e arquitetura) que obriguem reescrita",
+      "probabilidade": "média",
+      "impacto": "alto",
+      "variavel": "investimento, horas_manutencao_mes",
+      "mitigacao": "Negociar escopo de aderência antes da produção; manter o sistema portável"
+    },
+    {
+      "risco": "Manutenção acima do estimado ao transferir a operação para outra equipe",
+      "probabilidade": "média",
+      "impacto": "médio",
+      "variavel": "horas_manutencao_mes",
+      "mitigacao": "Documentação de API, testes automatizados e runbook"
+    },
+    {
+      "risco": "Taxa horária de mercado diferente da hipótese",
+      "probabilidade": "alta",
+      "impacto": "médio",
+      "variavel": "taxa_hora_dev",
+      "mitigacao": "Sensibilidade de ±20% e cenários; validar com pesquisa salarial"
+    },
+    {
+      "risco": "Exploração comercial sem acordo de propriedade intelectual",
+      "probabilidade": "baixa",
+      "impacto": "alto",
+      "variavel": "modelo de negócio",
+      "mitigacao": "Formalizar acordo com a instituição antes de qualquer oferta externa"
+    }
   ]
 }
