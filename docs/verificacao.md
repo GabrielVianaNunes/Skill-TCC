@@ -39,3 +39,15 @@ Resultados iguais aos do relatório. **Conferido.**
 ## Verificação adicional: TIR da Leitura B
 
 Com a TIR informada (-12,14%), o VPL do fluxo da Leitura B calculado à mão com `decimal` dá cerca de -16 reais sobre um investimento de 93 mil (o arredondamento da taxa para quatro casas explica a diferença); com a taxa completa do JSON (-0,121444) o VPL fica a menos de R$ 1 de zero.
+
+## Execução real dos 3 casos de avaliação no Claude Code (17/11/2026)
+
+Cada prompt de `evals/` foi executado em modo não interativo (`claude -p`) na raiz do repositório, com permissão apenas para a skill, leitura e `python`. Em todos os casos o agente acionou a skill sozinho (sem que o prompt citasse o nome dela) e executou o script indicado.
+
+| Caso | Script executado | Graders atendidos | Observação |
+|---|---|---|---|
+| `vpl-tir-payback-classico` | `calc_vpl_tir.py` | 6 de 6 | VPL R$ 388,77; TIR 24,89%; payback 2,60 e 3,05 anos; conclusão "vale a pena" |
+| `gva-sprint-projecao-eac` | `calc_gva.py` | 6 de 6 | CPI 0,889; SPI 0,800; EAC R$ 1.125.000, R$ 1.050.000 e R$ 1.293.750; TCPI 1,091 |
+| `tir-multipla-sem-tma` | `calc_vpl_tir.py` | 5 de 5 | Informou as duas TIRs (10% e 20%), decidiu pelo VPL e usou TMA de 15% rotulada como hipótese a substituir |
+
+A avaliação foi feita lendo a resposta e o registro de ferramentas de cada execução contra os graders; não foi usada a comparação automática com e sem a skill.
