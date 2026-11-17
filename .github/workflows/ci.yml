@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [develop, "release/**", "hotfix/**", "feature/**"]
+  pull_request:
+    branches: [main, develop]
+
+permissions:
+  contents: read
+
+jobs:
+  testes:
+    name: testes
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Testes unitários
+        run: python -m unittest discover -s tests -v
+      - name: Validação da skill e varredura do repositório
+        run: python scripts/validate_skill.py
+      - name: O relatório de exemplo continua reproduzível
+        run: |
+          python .agents/skills/engenharia-economica-software/scripts/gerar_relatorio.py \
+            --entrada examples/tcc-input.json \
+            --saida-md /tmp/relatorio.md --saida-json /tmp/relatorio.json
+          diff -q /tmp/relatorio.md examples/tcc-valuation-report.md
