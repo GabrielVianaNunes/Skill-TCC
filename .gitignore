@@ -1,7 +1,101 @@
+# ---------------------------------------------------------------------------
+# .gitignore versionado: vale para qualquer pessoa que clonar o repositório.
+# Regra de ouro: o que é pessoal, local, gerado ou secreto nunca entra no Git.
+# Padrões que só fazem sentido nesta máquina ficam em .git/info/exclude (não versionado).
+# ---------------------------------------------------------------------------
+
+# Python: caches, ambientes virtuais e empacotamento
 __pycache__/
-*.pyc
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+build/
 dist/
+*.skill
+
+# Resultados de avaliações (evals) e áreas de trabalho temporárias
 evals/results/
-.agents/skills/engenharia-economica-software/evals/results/
-.claude/skills/engenharia-economica-software/evals/results/
+**/evals/results/
+*-workspace/
+workspace/
+tmp/
+temp/
+scratch/
+
+# Segredos, credenciais e configuração local (nunca versionar)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.jks
+*.keystore
+id_rsa*
+id_ed25519*
+credentials*.json
+secrets*.json
+secrets/
+*.secret
+*.token
+.netrc
+.npmrc
+.pypirc
+
+# Configuração local de ferramentas e agentes (preferências pessoais, permissões, histórico)
+.claude/*
+!.claude/skills/
+.claude/skills/**/evals/results/
 .claude/settings.local.json
+.claude/projects/
+.claude/memory/
+.agents/*
+!.agents/skills/
+CLAUDE.md
+CLAUDE.local.md
+AGENTS.local.md
+GEMINI.local.md
+.cursor/
+.roo/
+.copilot/
+.continue/
+.aider*
+.codex/
+.gemini/
+
+# Editores e sistema operacional
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# Logs, dumps, dados brutos e anotações pessoais
+*.log
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+*.bak
+*.orig
+*.rej
+*.tmp
+notas-pessoais*
+anotacoes*
+rascunho*
+*.local.md
+*.local.json
+*.private.*
