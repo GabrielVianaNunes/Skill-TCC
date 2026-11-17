@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+dist/
+evals/results/
+.agents/skills/engenharia-economica-software/evals/results/
+.claude/skills/engenharia-economica-software/evals/results/
+.claude/settings.local.json
