@@ -5,7 +5,7 @@ license: MIT
 compatibility: Requer Python 3.9 ou superior (somente biblioteca padrão) e permissão do harness para executar comandos Python. Funciona em qualquer harness compatível com Agent Skills.
 metadata:
   autores: "Gabriel Viana Nunes; João Vítor de Alencar Fraissat Mamede"
-  versao: "1.0.0"
+  versao: "1.1.0"
   curso: "Engenharia de Software, Faculdade SENAI Fatesg"
   idioma: "pt-BR"
 ---

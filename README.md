@@ -20,7 +20,8 @@ Skill de IA, no padrão aberto **Agent Skills**, que ajuda líderes técnicos, P
 10. [Cobertura das Aulas 1 a 12](#cobertura-das-aulas-1-a-12)
 11. [Limitações](#limitações)
 12. [Mini workshop de 24/11](#mini-workshop-de-2411)
-13. [Créditos e licença](#créditos-e-licença)
+13. [Contribuição e fluxo de trabalho](#contribuição-e-fluxo-de-trabalho)
+14. [Créditos e licença](#créditos-e-licença)
 
 ## Propósito e público
 
@@ -55,7 +56,7 @@ Em qualquer plataforma, a skill precisa de **Python 3.9 ou superior** e de **per
 - Git, para clonar o repositório.
 
 ```bash
-git clone <url-deste-repositorio> skill-engenharia-economica-software
+git clone https://github.com/GabrielVianaNunes/Skill-TCC skill-engenharia-economica-software
 cd skill-engenharia-economica-software
 python -m unittest discover -s tests      # deve terminar em OK
 python scripts/validate_skill.py          # deve terminar com 0 erros
@@ -268,8 +269,8 @@ Preço do SaaS: piso de R$ 388,74/mês (custo + tributos), R$ 570,96 por markup 
 
 ### Decisões de engenharia e backlog
 
-- **Infraestrutura (CAUE, vidas diferentes):** nuvem com camada gratuita R$ 2.328,14/ano; VM paga R$ 3.528,14/ano; servidor on-premises R$ 7.050,08/ano.
-- **Construir x comprar:** manter o sistema próprio custa R$ 20.935,09 a menos em VP do que licenciar um LIMS de mercado hipotético.
+- **Infraestrutura (CAUE, vidas diferentes):** nuvem com camada gratuita R$ 2.336,44/ano; VM paga R$ 3.536,44/ano; servidor on-premises R$ 7.276,13/ano. A matriz ponderada empata em 6,80 entre a nuvem gratuita e a VM paga; o desempate é o critério econômico (CAUE), em que a nuvem gratuita custa R$ 1.200,00/ano a menos. A VM paga fica como plano B caso os termos da camada gratuita mudem (por isso a nuvem gratuita tem nota de risco operacional 5 contra 7 e o custo já prevê reserva de migração).
+- **Construir x comprar:** manter o sistema próprio custa R$ 20.124,55 a menos em VP do que licenciar um LIMS de mercado hipotético.
 - **Aposentadoria:** para o cadastro de scanners 3D mantido no navegador e para o anexo de termo de amostra incompleto, aposentar tem o menor custo anual equivalente, seguido de perto por refatorar.
 - **Backlog (Valor/Esforço):** a, f, d, c, l, e, i, k, b, h, g, j. Neste ciclo de 80 h entram 8 itens (76 h); calibração (g), relatórios PDF (h) e scanners (b) ficam para o próximo; multi-tenancy (j) não será feito (decisão registrada). Bom o suficiente em testes de interface: cobrir os 5 fluxos críticos.
 
